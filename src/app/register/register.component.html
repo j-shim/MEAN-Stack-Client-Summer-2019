@@ -7,30 +7,32 @@
   <h2>Register</h2>
   <p>Please fill in this form to create an account.</p>
   <hr>
-  <form>
+  <form (ngSubmit)="onSubmit(_registerForm)" [formGroup]="_registerForm">
     <div class="form-group">
       <label for="fname">First Name</label>
-      <input type="text" class="form-control" id="fname" placeholder="John" required>
+      <input type="text" class="form-control" id="fname" placeholder="John" required formControlName="firstname">
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
       <label for="lname">Last Name</label>
-      <input type="text" class="form-control" id="lname" placeholder="Smith" required>
+      <input type="text" class="form-control" id="lname" placeholder="Smith" required formControlName="lastname">
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
       <label for="email">Email Address</label>
-      <input type="email" class="form-control" id="email" placeholder="user@example.com" required>
+      <input type="email" class="form-control" id="email" placeholder="user@example.com" required
+        formControlName="email">
     </div>
     <div class="form-group">
       <label for="pwd">Password</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Minimum of 6 characters" required>
+      <input type="password" class="form-control" id="pwd" placeholder="Minimum of 6 characters" required
+        formControlName="password">
     </div>
     <div class="form-group">
       <label for="pwd2">Verify Password</label>
-      <input type="password" class="form-control" id="pwd2" required>
+      <input type="password" class="form-control" id="pwd2" required formControlName="password2">
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
