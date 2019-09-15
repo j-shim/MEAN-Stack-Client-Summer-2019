@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { RegisterService } from './register.service';
 
 @Component({
   selector: 'app-register',
@@ -9,6 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   private _registerForm: FormGroup;
   constructor(
+    private _registerService: RegisterService,
     private _formBuilder: FormBuilder
   ) { }
 
@@ -23,7 +25,7 @@ export class RegisterComponent implements OnInit {
   }
 
   public onSubmit(registerForm: FormGroup): void {
-    console.log(registerForm.value);
+    this._registerService.httpPostRegister(registerForm.value);
 
     this._registerForm.reset();
   }
