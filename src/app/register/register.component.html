@@ -7,7 +7,7 @@
   <h2>Register</h2>
   <p>Please fill in this form to create an account.</p>
   <hr>
-  <form (ngSubmit)="onSubmit(_registerForm)" [formGroup]="_registerForm">
+  <form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
     <div class="form-group">
       <label for="fname">First Name</label>
       <input type="text" class="form-control" id="fname" placeholder="John" required formControlName="firstname">
@@ -35,6 +35,7 @@
       <input type="password" class="form-control" id="pwd2" required formControlName="password2">
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
+    <a routerLink="/" class="btn btn-link">Cancel</a>
   </form>
 </div>
 

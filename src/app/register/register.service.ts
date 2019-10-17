@@ -17,6 +17,7 @@ export class RegisterService {
       .subscribe(resp => {
         console.log('########');
         console.log(resp);
+        this._router.navigate(['/']);
       }, err => {
         console.error('Error 123:', err);
       });
