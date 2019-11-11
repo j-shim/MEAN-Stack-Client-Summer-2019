@@ -1,0 +1,8 @@
+<div class="container" *ngIf="_alertService.message !== ''">
+  <div class="success" *ngIf="_alertService.isSuccess">
+    {{ _alertService.message }}
+  </div>
+  <div class="error" *ngIf="!_alertService.isSuccess">
+    {{ _alertService.message }}
+  </div>
+</div>
