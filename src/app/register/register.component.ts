@@ -31,10 +31,10 @@ export class RegisterComponent implements OnInit {
 
   public onSubmit(): void {
     // stop here if form is invalid
-    // if (this._registerForm.invalid) {
-    //   console.error('RegisterForm invalid');
-    //   return;
-    // }
+    if (this._registerForm.invalid) {
+      this._alertService.alert(false, 'Invalid Form');
+      return;
+    }
 
     const baseUrl = 'http://localhost:3000';
     const apiEndpoint = '/api/users/register';
