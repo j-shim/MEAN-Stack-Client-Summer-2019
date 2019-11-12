@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RestClientService } from '../../services/rest-client/rest-client.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from '../../services/alert/alert.service';
+import { SETTINGS } from 'src/app/settings';
 
 @Component({
   selector: 'app-login',
@@ -40,9 +41,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    const baseUrl = 'http://localhost:3000';
-    const apiEndpoint = '/api/users/authenticate';
-    this._restClientService.post(baseUrl + apiEndpoint, this._loginForm.value)
+    this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_USERS_LOGIN, this._loginForm.value)
       .subscribe(
         resp => {
           console.log('Login Successful:', resp);

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RestClientService } from '../../services/rest-client/rest-client.service';
 import { Router } from '@angular/router';
 import { AlertService } from '../../services/alert/alert.service';
+import { SETTINGS } from 'src/app/settings';
 
 @Component({
   selector: 'app-register',
@@ -36,9 +37,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
-    const baseUrl = 'http://localhost:3000';
-    const apiEndpoint = '/api/users/register';
-    this._restClientService.post(baseUrl + apiEndpoint, this._registerForm.value)
+    this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_USERS_REGISTER, this._registerForm.value)
       .subscribe(resp => {
         console.log('Registration Successful:', resp);
         this._alertService.alert(true, 'Registration Successful');
