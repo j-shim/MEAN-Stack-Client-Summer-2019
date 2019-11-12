@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
         this._router.navigate(['/login']);
       }, err => {
         console.error('Error on Register:', err);
-        this._alertService.alert(false, 'Error on Register');
+        this._alertService.alert(false, `Error on Register: ${typeof err === 'string' ? err : JSON.stringify(err)}`);
       });
 
     this._registerForm.reset();
