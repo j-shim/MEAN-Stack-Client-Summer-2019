@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RestClientService } from '../rest-client/rest-client.service';
+import { RestClientService } from '../services/rest-client.service';
 import { Router } from '@angular/router';
 import { AlertService } from '../alert/alert.service';
 
