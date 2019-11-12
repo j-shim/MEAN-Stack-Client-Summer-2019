@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RestClientService } from '../services/rest-client/rest-client.service';
+import { RestClientService } from '../../services/rest-client/rest-client.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlertService } from '../services/alert/alert.service';
+import { AlertService } from '../../services/alert/alert.service';
 
 @Component({
   selector: 'app-login',

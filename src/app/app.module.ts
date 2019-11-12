@@ -6,11 +6,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { MainComponent } from './main/main.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { AlertComponent } from './alert/alert.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MainComponent } from './components/main/main.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
