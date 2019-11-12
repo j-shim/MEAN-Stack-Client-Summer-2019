@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RestClientService } from '../services/rest-client/rest-client.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertService } from '../services/alert/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private _restClientService: RestClientService,
+    private _alertService: AlertService,
     private _formBuilder: FormBuilder,
     private _route: ActivatedRoute,
     private _router: Router
@@ -30,25 +32,27 @@ export class LoginComponent implements OnInit {
     this._returnUrl = this._route.snapshot.queryParams[RETURN_URL] || '/';
   }
 
-  public onSubmit(loginForm: FormGroup): void {
+  public onSubmit(): void {
 
     // stop here if form is invalid
     if (this._loginForm.invalid) {
+      this._alertService.alert(false, 'Invalid Form');
       return;
     }
 
     const baseUrl = 'http://localhost:3000';
-    const apiEndpoint = '/api/users/login';
-    this._restClientService.post(baseUrl + apiEndpoint, loginForm)
+    const apiEndpoint = '/api/users/authenticate';
+    this._restClientService.post(baseUrl + apiEndpoint, this._loginForm.value)
       .subscribe(
         resp => {
-          console.log('########');
-          console.log(resp);
+          console.log('Login Successful:', resp);
+          this._alertService.alert(true, 'Login Successful');
 
           this._router.navigate([this._returnUrl]);
         },
         err => {
-          console.error('Error 123:', err);
+          console.error('Error on Login:', err);
+          this._alertService.alert(false, `Error on Login: ${typeof err === 'string' ? err : JSON.stringify(err)}`);
         }
       );
 
