@@ -4,6 +4,7 @@ import { RestClientService } from '../../services/rest-client/rest-client.servic
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from '../../services/alert/alert.service';
 import { SETTINGS } from 'src/app/settings';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private _restClientService: RestClientService,
     private _alertService: AlertService,
+    private _userService: UserService,
     private _formBuilder: FormBuilder,
     private _route: ActivatedRoute,
     private _router: Router
@@ -43,8 +45,10 @@ export class LoginComponent implements OnInit {
 
     this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_USERS_LOGIN, this._loginForm.value)
       .subscribe(
-        resp => {
-          console.log('Login Successful:', resp);
+        userWithToken => {
+          this._userService.login(userWithToken);
+
+          console.log('Login Successful:', userWithToken);
           this._alertService.alert(true, 'Login Successful');
 
           this._router.navigate([this._returnUrl]);
