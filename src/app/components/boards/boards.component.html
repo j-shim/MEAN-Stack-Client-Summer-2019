@@ -1,1 +1,13 @@
-<p>boards works!</p>
+<div class="container">
+  <br />
+  <h2>Board #1</h2>
+  <hr />
+
+  <div>
+    <ul>
+      <li *ngFor="let post of posts">
+        {{ post.title }} ----- {{ post.author }}
+      </li>
+    </ul>
+  </div>
+</div>
