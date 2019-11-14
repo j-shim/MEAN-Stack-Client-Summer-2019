@@ -4,13 +4,15 @@ import { MainComponent } from './components/main/main.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { BoardsComponent } from './components/boards/boards.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'boards/:id', component: BoardsComponent },
+  { path: 'boards/:bid', component: BoardsComponent },
+  { path: 'boards/:bid/:pid', component: PostsComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '', pathMatch: 'full' }

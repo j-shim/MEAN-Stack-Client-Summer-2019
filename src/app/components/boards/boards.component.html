@@ -3,11 +3,8 @@
   <h2>Board #1</h2>
   <hr />
 
-  <div>
-    <ul>
-      <li *ngFor="let post of posts">
-        {{ post.title }} ----- {{ post.author }}
-      </li>
-    </ul>
+  <div *ngFor="let post of posts">
+    <a routerLink="/boards/1/{{post.id}}">{{post.title}}</a>
+    ----- {{post.author}}
   </div>
 </div>
