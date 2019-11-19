@@ -8,7 +8,7 @@ import { AlertService } from '../../services/alert/alert.service';
 })
 export class AlertComponent implements OnInit {
 
-  constructor(private _alertService: AlertService) { }
+  constructor(public alertService: AlertService) { }
 
   ngOnInit() {
   }

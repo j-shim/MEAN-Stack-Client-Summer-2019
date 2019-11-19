@@ -11,7 +11,7 @@ import { SETTINGS } from 'src/app/settings';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  private _registerForm: FormGroup;
+  public registerForm: FormGroup;
 
   constructor(
     private _restClientService: RestClientService,
@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._registerForm = this._formBuilder.group({
+    this.registerForm = this._formBuilder.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', Validators.required],
@@ -32,12 +32,12 @@ export class RegisterComponent implements OnInit {
 
   public onSubmit(): void {
     // stop here if form is invalid
-    if (this._registerForm.invalid) {
+    if (this.registerForm.invalid) {
       this._alertService.alert(false, 'Invalid Form');
       return;
     }
 
-    this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_USERS_REGISTER, this._registerForm.value)
+    this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_USERS_REGISTER, this.registerForm.value)
       .subscribe(resp => {
         console.log('Registration Successful:', resp);
         this._alertService.alert(true, 'Registration Successful');
@@ -47,6 +47,6 @@ export class RegisterComponent implements OnInit {
         this._alertService.alert(false, `Error on Register: ${typeof err === 'string' ? err : JSON.stringify(err)}`);
       });
 
-    this._registerForm.reset();
+    this.registerForm.reset();
   }
 }

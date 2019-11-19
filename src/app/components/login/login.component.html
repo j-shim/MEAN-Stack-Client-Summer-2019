@@ -3,7 +3,7 @@
   <h2>Login</h2>
   <p>Please enter your email and password below.</p>
   <hr>
-  <form (ngSubmit)="onSubmit()" [formGroup]="_loginForm">
+  <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
     <div class="form-group">
       <label for="email">Email</label>
       <input type="email" class="form-control" id="email" placeholder="user@example.com" formControlName="email"

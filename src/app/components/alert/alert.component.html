@@ -1,10 +1,10 @@
-<div class="container" *ngIf="_alertService.message !== ''">
-  <div class="alert alert-success alert-dismissible fade show" *ngIf="_alertService.isSuccess">
+<div class="container" *ngIf="alertService.message !== ''">
+  <div class="alert alert-success alert-dismissible fade show" *ngIf="alertService.isSuccess">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    {{ _alertService.message }}
+    {{ alertService.message }}
   </div>
-  <div class="alert alert-danger alert-dismissible fade show" *ngIf="!_alertService.isSuccess">
+  <div class="alert alert-danger alert-dismissible fade show" *ngIf="!alertService.isSuccess">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    {{ _alertService.message }}
+    {{ alertService.message }}
   </div>
 </div>

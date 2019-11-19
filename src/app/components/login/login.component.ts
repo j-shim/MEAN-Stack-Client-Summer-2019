@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  private _loginForm: FormGroup;
+  public loginForm: FormGroup;
   private _returnUrl: string;
 
   constructor(
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._loginForm = this._formBuilder.group({
+    this.loginForm = this._formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
     });
@@ -38,12 +38,12 @@ export class LoginComponent implements OnInit {
   public onSubmit(): void {
 
     // stop here if form is invalid
-    if (this._loginForm.invalid) {
+    if (this.loginForm.invalid) {
       this._alertService.alert(false, 'Invalid Form');
       return;
     }
 
-    this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_USERS_LOGIN, this._loginForm.value)
+    this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_USERS_LOGIN, this.loginForm.value)
       .subscribe(
         userWithToken => {
           this._userService.login(userWithToken);
@@ -59,6 +59,6 @@ export class LoginComponent implements OnInit {
         }
       );
 
-    this._loginForm.reset();
+    this.loginForm.reset();
   }
 }
