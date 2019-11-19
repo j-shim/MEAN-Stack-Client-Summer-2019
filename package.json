@@ -1,16 +1,28 @@
 {
   "name": "mean-client",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "MEAN stack client implementation",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:proxy": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build",
+    "build": "ng build --prod --output-path=dist/public && mv dist/public ../MEAN-Stack-Server-Summer-2019",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j-shim/MEAN-Stack-Client-Summer-2019"
+  },
+  "keywords": [
+    "MEAN",
+    "MongoDB",
+    "Express",
+    "Angular",
+    "Node"
+  ],
+  "author": "June Joo-Young Shim",
+  "license": "MIT",
   "dependencies": {
     "@angular/animations": "^8.2.14",
     "@angular/common": "^8.2.14",
