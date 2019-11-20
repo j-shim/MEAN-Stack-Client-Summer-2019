@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --output-path=dist/public && mv dist/public ../MEAN-Stack-Server-Summer-2019",
+    "build": "./ng-build.sh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
