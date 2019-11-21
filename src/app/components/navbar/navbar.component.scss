@@ -1,7 +1,53 @@
-nav {
+// #bc3a2c;
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   background-color: #bc3a2c;
 
-  a {
-    color: white;
+  li {
+    float: left;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    &.right {
+      float: right;
+    }
+    a {
+      height: 60px;
+      display: block;
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      padding: 14px 16px;
+      text-decoration: none;
+
+      &:hover:not(.logo) {
+        background-color: #111;
+      }
+
+      &.logo {
+        background-color: #bc3a2c;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav {
+    li {
+      float: none;
+
+      &.logo {
+        display: none;
+      }
+      &.right {
+        float: none;
+      }
+    }
   }
 }

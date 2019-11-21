@@ -1,0 +1,35 @@
+<!-- https://www.codeply.com/go/PqIBtz3HPL -->
+<nav class="navbar navbar-expand-md sticky-top">
+  <!-- Brand -->
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="assets/img/canorea-logo.png" width="70" height="70" alt="Canorea Logo">
+  </a>
+
+  <!-- Toggler/collapsible Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <!-- should use ngIf -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <!-- data-toggle and data-target collapses on click: study this later -->
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/register']">Register</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"
+        *ngIf="!userService.isUserLoggedIn">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"
+        *ngIf="userService.isUserLoggedIn">
+        <a class="nav-link" (click)="userService.logout()">Logout</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/boards/1']">Board #1</a>
+      </li>
+    </ul>
+  </div>
+</nav>
