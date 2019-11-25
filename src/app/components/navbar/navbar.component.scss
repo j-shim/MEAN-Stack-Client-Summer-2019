@@ -1,38 +1,36 @@
-nav {
+// background-color: #bc3a2c;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-rows: 30px 60px;
+  grid-template-areas: "empty empty empty empty empty . .";
   background-color: #bc3a2c;
+  // justify-content: center;
+  // align-items: center;
+  // justify-items: center;
 
-  a {
-    color: white;
-  }
+  .grid-item {
+    border: 1px solid black;
+    text-align: center;
+    line-height: 60px;
+    // align-content: center;
 
-  // .dropdown-menu {
-  //   background-color: #bc3a2c;
-  // }
+    &.empty {
+      grid-area: empty;
+    }
 
-  ul li {
-    display: inline-block;
-    position: relative;
+    &.empty,
+    &.register,
+    &.login {
+      line-height: 30px;
+    }
 
     a {
-      display: block;
-      &:hover {
-        color: #666;
-      }
-    }
-    ul.dropdown {
-      min-width: 100%;
-
-      background-color: #bc3a2c;
-      display: none;
-      position: absolute;
-      z-index: 999;
-
-      li {
-        display: block;
-      }
-    }
-    &:hover ul.dropdown {
-      display: block;
+      // display: block;
+      color: #f3eded;
+      text-decoration: none;
+      // align-content: space-around;
+      // text-align: center;
     }
   }
 }
