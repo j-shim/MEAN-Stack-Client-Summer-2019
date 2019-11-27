@@ -1,38 +1,9 @@
+@import 'src/variables';
+
+* {
+  // background: $theme-primary;
+}
+
 nav {
-  background-color: #bc3a2c;
-
-  a {
-    color: white;
-  }
-
-  // .dropdown-menu {
-  //   background-color: #bc3a2c;
-  // }
-
-  ul li {
-    display: inline-block;
-    position: relative;
-
-    a {
-      display: block;
-      &:hover {
-        color: #666;
-      }
-    }
-    ul.dropdown {
-      min-width: 100%;
-
-      background-color: #bc3a2c;
-      display: none;
-      position: absolute;
-      z-index: 999;
-
-      li {
-        display: block;
-      }
-    }
-    &:hover ul.dropdown {
-      display: block;
-    }
-  }
+  // background: gray;
 }
