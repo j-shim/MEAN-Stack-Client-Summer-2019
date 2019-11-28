@@ -42,7 +42,7 @@
   </div>
 </div> -->
 <!-- https://www.codeply.com/go/PqIBtz3HPL -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-dark sticky-top">
   <!-- Brand -->
   <a class="navbar-brand" [routerLink]="['/']">
     <img src="assets/img/canorea-logo.png" width="79" height="79" alt="Canorea Logo">
@@ -57,32 +57,56 @@
   <!-- Navbar links -->
   <!-- should use ngIf -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="container">
+    <!-- navbar-nav ? -->
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-2 offset-md-8">
+        <div class="col-md-2 offset-md-8" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link" [routerLink]="['/register']">Register</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show"
+          *ngIf="!userService.isUserLoggedIn">
           <a class="nav-link" [routerLink]="['/login']">Login</a>
+        </div>
+        <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show"
+          *ngIf="userService.isUserLoggedIn">
+          <a class="nav-link" (click)="userService.logout()">Logout</a>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-2">
-          <a class="nav-link" [routerLink]="['/#']">Menu</a>
+        <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" [routerLink]="['/boards/1']">Board #1</a>
+        </div>
+        <div class="col-md-2 dropdown" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link dropdown-item" href="#">Action</a>
+            <a class="nav-link dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link dropdown-item" href="#">Something else here</a>
+          </div>
         </div>
         <div class="col-md-2">
+          <a class="nav-link" id="navbarDropdown" role="button" data-toggle="collapse" data-target="#dropdown-menu-1"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="collapse navbar-collapse" id="dropdown-menu-1" aria-labelledby="navbarDropdown">
+            <a class="nav-link" href="#">Action</a>
+            <a class="nav-link" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link" href="#">Something else here</a>
+          </div>
+        </div>
+        <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link" [routerLink]="['/#']">Menu</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link" [routerLink]="['/#']">Menu</a>
         </div>
-        <div class="col-md-2">
-          <a class="nav-link" [routerLink]="['/#']">Menu</a>
-        </div>
-        <div class="col-md-2">
-          <a class="nav-link" [routerLink]="['/#']">Menu</a>
-        </div>
-        <div class="col-md-2">
+        <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link" [routerLink]="['/#']">Menu</a>
         </div>
       </div>

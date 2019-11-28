@@ -4,6 +4,104 @@
   // background: $theme-primary;
 }
 
-nav {
-  // background: gray;
+.navbar {
+  padding: 0.05rem 1rem;
+  background-color: $theme-primary;
+
+  .navbar-toggler {
+    color: $white-alpha-1;
+    border-color: $white-alpha-3;
+    outline-color: $white-alpha-3;
+  }
+
+  .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .col-md-2 {
+    padding: 0;
+    text-align: center;
+
+    .nav-link {
+      color: $white-alpha-1;
+
+      &:hover {
+        color: $white-alpha-2;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $theme-primary-2;
+
+      .dropdown-item {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
+    }
+  }
 }
+
+// small devices
+@media screen and (max-width: $width-md) {
+  .navbar {
+    .col-md-2 {
+      text-align: left;
+    }
+  }
+}
+// override bootstrap
+// .navbar-dark {
+//   .navbar-brand {
+//     color: $navbar-dark-brand-color;
+
+//     @include hover-focus() {
+//       color: $navbar-dark-brand-hover-color;
+//     }
+//   }
+
+//   .navbar-nav {
+//     .nav-link {
+//       color: $navbar-dark-color;
+
+//       @include hover-focus() {
+//         color: $navbar-dark-hover-color;
+//       }
+
+//       &.disabled {
+//         color: $navbar-dark-disabled-color;
+//       }
+//     }
+
+//     .show > .nav-link,
+//     .active > .nav-link,
+//     .nav-link.show,
+//     .nav-link.active {
+//       color: $navbar-dark-active-color;
+//     }
+//   }
+
+//   .navbar-toggler {
+//     color: $navbar-dark-color;
+//     border-color: $navbar-dark-toggler-border-color;
+//   }
+
+//   .navbar-toggler-icon {
+//     background-image: escape-svg($navbar-dark-toggler-icon-bg);
+//   }
+
+//   .navbar-text {
+//     color: $navbar-dark-color;
+//     a {
+//       color: $navbar-dark-active-color;
+
+//       @include hover-focus() {
+//         color: $navbar-dark-active-color;
+//       }
+//     }
+//   }
+// }
