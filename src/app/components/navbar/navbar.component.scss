@@ -21,7 +21,6 @@
 
   .col-md-2 {
     padding: 0;
-    text-align: center;
 
     .nav-link {
       color: $white-alpha-1;
@@ -31,26 +30,37 @@
       }
     }
 
-    .dropdown-menu {
+    .c-dropdown-menu {
       background-color: $theme-primary-2;
-
-      .dropdown-item {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-
-        &:hover {
-          background-color: inherit;
-        }
-      }
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 }
 
-// small devices
-@media screen and (max-width: $width-md) {
+// large devices (desktop)
+@media screen and (min-width: $width-md) {
   .navbar {
     .col-md-2 {
-      text-align: left;
+      text-align: center;
+      // position: relative;
+
+      .c-dropdown-menu {
+        position: absolute;
+        margin: 0;
+        min-width: 100%;
+        background-color: $theme-primary;
+        flex-direction: column;
+        display: none !important;
+
+        a {
+          // text-align: center;
+        }
+      }
+      
+      &:hover .c-dropdown-menu {
+        display: flex !important;
+      }
     }
   }
 }
