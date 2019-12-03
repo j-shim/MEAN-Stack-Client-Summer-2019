@@ -1,11 +1,7 @@
 @import 'src/variables';
 
-* {
-  // background: $theme-primary;
-}
-
 .navbar {
-  padding: 0.05rem 1rem;
+  padding: 0rem 1rem;
   background-color: $theme-primary;
 
   .navbar-toggler {
@@ -15,8 +11,12 @@
   }
 
   .navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
+
+    // Logo
+    .nav-link {
+      padding: inherit;
+    }
   }
 
   .col-md-2 {
@@ -57,7 +57,7 @@
           // text-align: center;
         }
       }
-      
+
       &:hover .c-dropdown-menu {
         display: flex !important;
       }
