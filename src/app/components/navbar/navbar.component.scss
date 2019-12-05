@@ -45,6 +45,14 @@
       text-align: center;
       // position: relative;
 
+      .collapsing { // override bootstrap
+        transition: none;
+      }
+
+      .show { // override bootstrap
+        display: none;
+      }
+
       .c-dropdown-menu {
         position: absolute;
         margin: 0;
@@ -52,6 +60,7 @@
         background-color: $theme-primary;
         flex-direction: column;
         display: none !important;
+        // transition: height .35s ease; // $transition-collapse from bootstrap
 
         a {
           // text-align: center;
