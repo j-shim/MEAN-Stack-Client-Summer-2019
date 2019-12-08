@@ -53,7 +53,7 @@
         display: none;
       }
 
-      .c-dropdown-menu {
+      >.c-dropdown-menu {
         position: absolute;
         margin: 0;
         min-width: 100%;
@@ -62,6 +62,10 @@
         display: none !important;
         // transition: height .35s ease; // $transition-collapse from bootstrap
 
+        .c-dropdown-menu {
+          display: flex;
+          flex-direction: column;
+        }
         a {
           // text-align: center;
         }

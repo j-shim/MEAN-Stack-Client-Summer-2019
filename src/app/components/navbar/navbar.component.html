@@ -157,8 +157,20 @@
             관련교육기관
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-6">
-            <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">공립교육청</a>
+            <div>
+              <!-- <div data-toggle="collapse" data-target=".navbar-collapse.show"> -->
+              <a class="nav-link c-dropdown-toggle" data-toggle="collapse" data-target="#dropdown-menu-6-1"
+                aria-controls="dropdown-menu-6-1" aria-expanded="false" aria-label="Toggle Dropdown">
+                공립교육청
+              </a>
+              <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-6-1">
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/']">empty</a>
+                </div>
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/']">empty</a>
+                </div>
+              </div>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
               <a class="nav-link" [routerLink]="['/']">사립학교</a>
