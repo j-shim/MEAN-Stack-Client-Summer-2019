@@ -1,0 +1,38 @@
+@import 'src/variables';
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .flex-item {
+    width: 25%;
+    height: 3rem;
+  }
+}
+
+#blog {
+  background: red;
+}
+
+#cafe {
+  background: blue;
+}
+
+#instagram {
+  background: purple;
+}
+
+#contact {
+  background: green;
+}
+
+@media screen and (min-width: $width-md) {
+  .flex-container {
+    flex-direction: column;
+
+    .flex-item {
+      width: 100%;
+    }
+  }
+}
