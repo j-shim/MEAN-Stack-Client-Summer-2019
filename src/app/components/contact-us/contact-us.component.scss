@@ -3,36 +3,44 @@
 .flex-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  background-color: #e2afa2;
 
   .flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 25%;
-    height: 3rem;
+    // border: 2px solid black;
+    
+    a {
+      display: block;
+      padding: 0.2rem 0;
+      // border: 1px solid red;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      span {
+        padding: 0 0.7rem;
+        vertical-align: middle;
+      }
+    }
   }
-}
-
-#blog {
-  background: red;
-}
-
-#cafe {
-  background: blue;
-}
-
-#instagram {
-  background: purple;
-}
-
-#contact {
-  background: green;
 }
 
 @media screen and (min-width: $width-md) {
   .flex-container {
     flex-direction: column;
 
+    position: sticky;
+    top: 5rem;
+
     .flex-item {
       width: 100%;
+      flex-direction: row;
     }
   }
 }
