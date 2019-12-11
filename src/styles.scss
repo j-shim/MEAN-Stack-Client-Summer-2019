@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-// * {
-//   font-family: Lato;
-// }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
