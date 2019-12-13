@@ -10,3 +10,6 @@ $white-alpha-3: rgba(255, 255, 255, 0.2);
 $width-sm: 576px;
 $width-md: 768px;
 $width-lg: 992px;
+
+$offset-percent: 12%;
+$main-percent: 100% - (2 * $offset-percent);

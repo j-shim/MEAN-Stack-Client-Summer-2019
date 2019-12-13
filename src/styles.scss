@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import 'src/variables';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,4 +17,34 @@ a, a:hover {
 .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+// Custom class similar to col-md-10, col-md-2 but different ratio
+.c-col-main, .c-col-side {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.c-col-main {
+  //
+}
+
+.c-col-side {
+  //
+}
+
+@media screen and (min-width: $width-md) {
+  .c-offset-side {
+    margin-left: $offset-percent;
+  }
+  .c-col-main {
+    flex: 0 0 $main-percent;
+    max-width: $main-percent;
+  }
+  .c-col-side {
+    flex: 0 0 $offset-percent;
+    max-width: $offset-percent;
+  }
 }
