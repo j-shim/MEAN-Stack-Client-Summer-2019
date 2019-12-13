@@ -363,13 +363,13 @@
   <circle cx="772.1347" cy="555.57391" id="0" r="0" />
   <circle cx="783.53473" cy="557.37396" id="1" r="0" />
   <circle cx="700.53473" cy="607.47394" id="2" r="0" />
-  <circle cx="195" cy="514" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="207" cy="500" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="309" cy="430" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="314" cy="470" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="386" cy="450" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="410" cy="480" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="497" cy="486" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="700" cy="590" r="5" stroke="red" stroke-width="1" fill="red" />
-  <circle cx="735" cy="572" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="victoria" cx="195" cy="514" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="vancouver" cx="207" cy="500" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="edmonton" cx="309" cy="430" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="calgary" cx="314" cy="470" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="saskatoon" cx="386" cy="450" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="regina" cx="410" cy="480" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="winnipeg" cx="497" cy="486" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="toronto" cx="700" cy="590" r="5" stroke="red" stroke-width="1" fill="red" />
+  <circle class="city" id="ottawa" cx="735" cy="572" r="5" stroke="red" stroke-width="1" fill="red" />
 </svg>
