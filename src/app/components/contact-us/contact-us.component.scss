@@ -12,20 +12,27 @@
     align-items: center;
     width: 25%;
     // border: 2px solid black;
-    
+
     a {
       display: block;
       padding: 0.2rem 0;
       // border: 1px solid red;
 
-      svg {
-        width: 2rem;
-        height: 2rem;
-      }
+      .flex-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-      span {
-        padding: 0 0.7rem;
-        vertical-align: middle;
+        svg {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+
+        span {
+          font-size: 0.8rem;
+          padding: 0;
+        }
       }
     }
   }
@@ -41,6 +48,17 @@
     .flex-item {
       width: 100%;
       flex-direction: row;
+
+      a {
+        .flex-link {
+          flex-direction: row;
+
+          span {
+            font-size: 1rem;
+            padding-left: 0.6rem;
+          }
+        }
+      }
     }
   }
 }
