@@ -7,6 +7,10 @@
   border: 1px solid black;
 }
 svg {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
   // fill: #2ec547;
   // fill: #cc786f;
   fill: url(#grad1);
@@ -21,10 +25,15 @@ svg {
 }
 
 path:not(.flight), circle {
-  transition: fill 0.5s ease;
+  transition: transform 0.5s ease;
 }
-path:not(.flight):hover {
-  fill: #35e753;
+path:not(.flight):hover,
+path.bc:hover ~ circle.bc,
+path.ab:hover ~ circle.ab,
+path.sk:hover ~ circle.sk,
+path.mb:hover ~ circle.mb,
+path.on:hover ~ circle.on {
+  transform: translate(-2px,-2px);
 }
 path.victoria {
   stroke-dasharray: 160;
