@@ -27,13 +27,14 @@ svg {
 path:not(.flight), circle {
   transition: transform 0.5s ease;
 }
-path:not(.flight):hover,
-path.bc:hover ~ circle.bc,
-path.ab:hover ~ circle.ab,
-path.sk:hover ~ circle.sk,
-path.mb:hover ~ circle.mb,
-path.on:hover ~ circle.on {
-  transform: translate(-2px,-2px);
+// path:not(.flight):hover,
+// path.bc:hover ~ circle.bc,
+// path.ab:hover ~ circle.ab,
+// path.sk:hover ~ circle.sk,
+// path.mb:hover ~ circle.mb,
+// path.on:hover ~ circle.on {
+path:not(.flight):hover {
+  transform: translate(-1px,-1px);
 }
 path.victoria {
   stroke-dasharray: 160;
