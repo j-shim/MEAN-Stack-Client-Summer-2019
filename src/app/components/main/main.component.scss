@@ -24,26 +24,64 @@ svg {
   top: 0;
 }
 
-path:not(.flight), circle {
+path {
   transition: transform 0.5s ease;
-}
-// path:not(.flight):hover,
-// path.bc:hover ~ circle.bc,
-// path.ab:hover ~ circle.ab,
-// path.sk:hover ~ circle.sk,
-// path.mb:hover ~ circle.mb,
-// path.on:hover ~ circle.on {
-path:not(.flight):hover {
-  transform: translate(-1px,-1px);
-}
-path.victoria {
-  stroke-dasharray: 160;
-  stroke-dashoffset: 160;
-  transition: stroke-dashoffset 3s ease;
 
-  path.bc:hover ~ & {
-    stroke-dashoffset: 0;
+  // path:not(.flight):hover,
+  // path.bc:hover ~ circle.bc,
+  // path.ab:hover ~ circle.ab,
+  // path.sk:hover ~ circle.sk,
+  // path.mb:hover ~ circle.mb,
+  // path.on:hover ~ circle.on {
+  &:not(.flight-path):hover {
+    transform: translate(-1px,-1px);
   }
+
+  &.victoria,
+  &.edmonton,
+  &.regina,
+  &.winnipeg,
+  &.ottawa,
+  &.montreal {
+    stroke: #101a10;
+    stroke-width: 0.5;
+    fill: none;
+
+    transition: stroke-dashoffset 2.5s ease;
+  }
+  &.victoria {
+    stroke-dasharray: 160;
+    stroke-dashoffset: 160;
+  }
+  &.edmonton {
+    stroke-dasharray: 130;
+    stroke-dashoffset: 130;
+  }
+  &.regina {
+    stroke-dasharray: 110;
+    stroke-dashoffset: 110;
+  }
+  &.winnipeg {
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+  }
+  &.ottawa {
+    stroke-dasharray: 160;
+    stroke-dashoffset: 160;
+  }
+  // &.montreal {
+  //   stroke-dasharray: 130;
+  //   stroke-dashoffset: 130;
+  // }
+}
+
+.bc:hover ~ path.victoria,
+.ab:hover ~ path.edmonton,
+.sk:hover ~ path.regina,
+.mb:hover ~ path.winnipeg,
+.on:hover ~ path.ottawa,
+.qc:hover ~ path.montreal {
+  stroke-dashoffset: 0;
 }
 
 // .flight {
