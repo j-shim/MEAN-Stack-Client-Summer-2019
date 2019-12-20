@@ -24,75 +24,75 @@ export class MainComponent implements OnInit {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[0][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j].style['stroke-dashoffset'] = '0';
+            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
+            pathElem[j]['style']['stroke-dashoffset'] = '0';
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[0][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'none';
-            pathElem[j].style['stroke-dashoffset'] = prov[0][2];
+            pathElem[j]['style']['transition'] = 'none';
+            pathElem[j]['style']['stroke-dashoffset'] = prov[0][2];
           }
         });
       } else if (provinceElem[i].classList.value.includes(prov[1][0])) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[1][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j].style['stroke-dashoffset'] = '0';
+            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
+            pathElem[j]['style']['stroke-dashoffset'] = '0';
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[1][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'none';
-            pathElem[j].style['stroke-dashoffset'] = prov[1][2];
+            pathElem[j]['style']['transition'] = 'none';
+            pathElem[j]['style']['stroke-dashoffset'] = prov[1][2];
           }
         });
       } else if (provinceElem[i].classList.value.includes(prov[2][0])) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[2][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j].style['stroke-dashoffset'] = '0';
+            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
+            pathElem[j]['style']['stroke-dashoffset'] = '0';
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[2][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'none';
-            pathElem[j].style['stroke-dashoffset'] = prov[2][2];
+            pathElem[j]['style']['transition'] = 'none';
+            pathElem[j]['style']['stroke-dashoffset'] = prov[2][2];
           }
         });
       } else if (provinceElem[i].classList.value.includes(prov[3][0])) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[3][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j].style['stroke-dashoffset'] = '0';
+            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
+            pathElem[j]['style']['stroke-dashoffset'] = '0';
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[3][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'none';
-            pathElem[j].style['stroke-dashoffset'] = prov[3][2];
+            pathElem[j]['style']['transition'] = 'none';
+            pathElem[j]['style']['stroke-dashoffset'] = prov[3][2];
           }
         });
       } else if (provinceElem[i].classList.value.includes(prov[4][0])) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[4][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j].style['stroke-dashoffset'] = '0';
+            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
+            pathElem[j]['style']['stroke-dashoffset'] = '0';
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[4][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].style['transition'] = 'none';
-            pathElem[j].style['stroke-dashoffset'] = prov[4][2];
+            pathElem[j]['style']['transition'] = 'none';
+            pathElem[j]['style']['stroke-dashoffset'] = prov[4][2];
           }
         });
       }
