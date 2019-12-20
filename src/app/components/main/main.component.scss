@@ -25,7 +25,7 @@ svg {
 }
 
 path {
-  transition: transform 0.5s ease;
+  transition: all 0.5s ease;
 
   // path:not(.flight):hover,
   // path.bc:hover ~ circle.bc,
@@ -34,6 +34,7 @@ path {
   // path.mb:hover ~ circle.mb,
   // path.on:hover ~ circle.on {
   &:not(.flight-path):hover {
+    fill: #c75a4e;
     transform: translate(-1px,-1px);
   }
 
