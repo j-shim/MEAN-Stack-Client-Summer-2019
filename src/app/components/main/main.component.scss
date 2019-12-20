@@ -48,7 +48,7 @@ path {
     stroke-width: 0.5;
     fill: none;
 
-    transition: stroke-dashoffset 2.5s ease;
+    // transition: stroke-dashoffset 2.5s ease;
   }
   &.victoria {
     stroke-dasharray: 160;
@@ -82,7 +82,7 @@ path {
 .mb:hover ~ path.winnipeg,
 .on:hover ~ path.ottawa,
 .qc:hover ~ path.montreal {
-  stroke-dashoffset: 0;
+  // stroke-dashoffset: 0;
 }
 
 // .flight {
