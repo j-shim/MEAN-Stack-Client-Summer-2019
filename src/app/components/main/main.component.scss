@@ -43,7 +43,8 @@ path {
   &.regina,
   &.winnipeg,
   &.ottawa,
-  &.montreal {
+  &.montreal,
+  &.halifax {
     stroke: #101a10;
     stroke-width: 0.5;
     fill: none;
@@ -51,29 +52,33 @@ path {
     // transition: stroke-dashoffset 2.5s ease;
   }
   &.victoria {
-    stroke-dasharray: 160;
-    stroke-dashoffset: 160;
+    stroke-dasharray: 196;
+    stroke-dashoffset: 196;
   }
   &.edmonton {
-    stroke-dasharray: 130;
-    stroke-dashoffset: 130;
+    stroke-dasharray: 169;
+    stroke-dashoffset: 169;
   }
   &.regina {
-    stroke-dasharray: 110;
-    stroke-dashoffset: 110;
+    stroke-dasharray: 137;
+    stroke-dashoffset: 137;
   }
   &.winnipeg {
-    stroke-dasharray: 90;
-    stroke-dashoffset: 90;
+    stroke-dasharray: 111;
+    stroke-dashoffset: 111;
   }
   &.ottawa {
     stroke-dasharray: 160;
     stroke-dashoffset: 160;
   }
-  // &.montreal {
-  //   stroke-dasharray: 130;
-  //   stroke-dashoffset: 130;
-  // }
+  &.montreal {
+    stroke-dasharray: 164;
+    stroke-dashoffset: 164;
+  }
+  &.halifax {
+    stroke-dasharray: 196;
+    stroke-dashoffset: 196;
+  }
 }
 
 .bc:hover ~ path.victoria,
@@ -81,7 +86,8 @@ path {
 .sk:hover ~ path.regina,
 .mb:hover ~ path.winnipeg,
 .on:hover ~ path.ottawa,
-.qc:hover ~ path.montreal {
+.qc:hover ~ path.montreal,
+.ns:hover ~ path.halifax {
   // stroke-dashoffset: 0;
 }
 
