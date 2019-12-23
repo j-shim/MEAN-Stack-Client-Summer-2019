@@ -13,7 +13,15 @@ export class RestClientService {
   ) { }
 
   public get<T>(url: string): Observable<T> {
-    return this._http.get<T>(url);
+    return this._http.get<T>(url).pipe(
+      catchError(this._handleError)
+    );
+  }
+
+  public getHtml(url: string): Observable<string> {
+    return this._http.get(url, { responseType: 'text' }).pipe(
+      catchError(this._handleError)
+    );
   }
 
   public post(url: string, body: any): Observable<any> {
