@@ -5,6 +5,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { BoardsComponent } from './components/boards/boards.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { StaticComponent } from './components/static/static.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'boards/:bid', component: BoardsComponent },
   { path: 'boards/:bid/:pid', component: PostsComponent },
+  { path: 'page/:id', component: StaticComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '', pathMatch: 'full' }

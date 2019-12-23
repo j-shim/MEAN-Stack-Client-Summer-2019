@@ -15,6 +15,7 @@ import { BoardsComponent } from './components/boards/boards.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { StaticComponent } from './components/static/static.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BoardsComponent,
     PostsComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    StaticComponent
   ],
   imports: [
     BrowserModule,
