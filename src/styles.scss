@@ -8,7 +8,8 @@
   margin: 0;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: #000;
   display: block;
@@ -20,7 +21,8 @@ a, a:hover {
 }
 
 // Custom class similar to col-md-10, col-md-2 but different ratio
-.c-col-main, .c-col-side {
+.c-col-main,
+.c-col-side {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -33,6 +35,45 @@ a, a:hover {
 
 .c-col-side {
   //
+}
+
+// Styles for static.component.scss
+div#app-static-html {
+  margin: 2rem;
+  ul {
+    margin-left: 1rem;
+  }
+  ul.disc {
+    list-style-type: disc;
+  }
+  ul.dashed {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1rem;
+  }
+  ul.dashed > li:before {
+    display: inline-block;
+    content: '-';
+    width: 0.7rem;
+    margin-left: -1rem;
+  }
+
+  a,
+  a:hover {
+    color: #007bff;
+    word-wrap: break-word;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .intro {
+    border: 1px solid black;
+  }
+  pre {
+    font-size: 100%;
+  }
 }
 
 @media screen and (min-width: $width-md) {
