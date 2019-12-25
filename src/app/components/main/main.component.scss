@@ -23,7 +23,25 @@ svg {
   left: 0;
   top: 0;
 }
-
+a {
+  display: none;
+}
+.bc:hover ~ a.bc,
+.ab:hover ~ a.ab,
+.sk:hover ~ a.sk,
+.mb:hover ~ a.mb,
+.on:hover ~ a.on,
+.qc:hover ~ a.qc,
+.ns:hover ~ a.ns,
+a.bc:hover,
+a.ab:hover,
+a.sk:hover,
+a.mb:hover,
+a.on:hover,
+a.qc:hover,
+a.ns:hover {
+  display: block;
+}
 path {
   transition: all 0.5s ease;
 
@@ -33,9 +51,9 @@ path {
   // path.sk:hover ~ circle.sk,
   // path.mb:hover ~ circle.mb,
   // path.on:hover ~ circle.on {
-  &.province:hover {
-    // fill: #c75a4e;
-    // transform: translate(-1px, -1px);
+  &:not(.flight-path):hover {
+    fill: #c75a4e;
+    transform: translate(-1px, -1px);
   }
 
   &.victoria,

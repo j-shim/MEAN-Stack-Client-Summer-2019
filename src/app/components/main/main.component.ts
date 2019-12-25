@@ -25,7 +25,7 @@ export class MainComponent implements OnInit {
   }
 
   private _setMapHoverTransition(): void {
-    const mapElem = document.querySelectorAll('path.province');
+    const mapElem = document.querySelectorAll('.province');
     // Use for loop for IE browser support
     for (let i = 0; i < mapElem.length; i++) {
       if (mapElem[i].classList.value.includes(prov[0][0])) {
