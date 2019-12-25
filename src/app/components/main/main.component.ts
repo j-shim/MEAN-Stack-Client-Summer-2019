@@ -19,8 +19,127 @@ export class MainComponent implements OnInit {
 
   constructor(public userService: UserService) { }
 
-  ngOnInit() { // ignore all the errors, it's working
+  ngOnInit() {
+    this._setMapHoverTransition();
+    this._setPathTransition();
+  }
+
+  private _setMapHoverTransition(): void {
+    const mapElem = document.querySelectorAll('path.province');
+    // Use for loop for IE browser support
+    for (let i = 0; i < mapElem.length; i++) {
+      if (mapElem[i].classList.value.includes(prov[0][0])) {
+        mapElem[i].addEventListener('mouseover', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
+            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+          }
+        });
+        mapElem[i].addEventListener('mouseout', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
+            mapProvinceElem[j]['style']['transform'] = 'none';
+          }
+        });
+      } else if (mapElem[i].classList.value.includes(prov[1][0])) {
+        mapElem[i].addEventListener('mouseover', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
+            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+          }
+        });
+        mapElem[i].addEventListener('mouseout', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
+            mapProvinceElem[j]['style']['transform'] = 'none';
+          }
+        });
+      } else if (mapElem[i].classList.value.includes(prov[2][0])) {
+        mapElem[i].addEventListener('mouseover', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
+            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+          }
+        });
+        mapElem[i].addEventListener('mouseout', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
+            mapProvinceElem[j]['style']['transform'] = 'none';
+          }
+        });
+      } else if (mapElem[i].classList.value.includes(prov[3][0])) {
+        mapElem[i].addEventListener('mouseover', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
+            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+          }
+        });
+        mapElem[i].addEventListener('mouseout', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
+            mapProvinceElem[j]['style']['transform'] = 'none';
+          }
+        });
+      } else if (mapElem[i].classList.value.includes(prov[4][0])) {
+        mapElem[i].addEventListener('mouseover', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
+            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+          }
+        });
+        mapElem[i].addEventListener('mouseout', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
+            mapProvinceElem[j]['style']['transform'] = 'none';
+          }
+        });
+      } else if (mapElem[i].classList.value.includes(prov[5][0])) {
+        mapElem[i].addEventListener('mouseover', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
+            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+          }
+        });
+        mapElem[i].addEventListener('mouseout', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
+            mapProvinceElem[j]['style']['transform'] = 'none';
+          }
+        });
+      } else if (mapElem[i].classList.value.includes(prov[6][0])) {
+        mapElem[i].addEventListener('mouseover', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
+            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+          }
+        });
+        mapElem[i].addEventListener('mouseout', () => {
+          const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
+          for (let j = 0; j < mapProvinceElem.length; j++) {
+            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
+            mapProvinceElem[j]['style']['transform'] = 'none';
+          }
+        });
+      }
+    }
+  }
+
+  private _setPathTransition(): void { // ignore all the errors, it's working
     const provinceElem = document.getElementsByClassName('province');
+    // Use for loop for IE browser support
     for (let i = 0; i < provinceElem.length; i++) {
       if (provinceElem[i].classList.value.includes(prov[0][0])) {
         provinceElem[i].addEventListener('mouseover', () => {

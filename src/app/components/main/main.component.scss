@@ -33,9 +33,9 @@ path {
   // path.sk:hover ~ circle.sk,
   // path.mb:hover ~ circle.mb,
   // path.on:hover ~ circle.on {
-  &:not(.flight-path):hover {
-    fill: #c75a4e;
-    transform: translate(-1px,-1px);
+  &.province:hover {
+    // fill: #c75a4e;
+    // transform: translate(-1px, -1px);
   }
 
   &.victoria,
