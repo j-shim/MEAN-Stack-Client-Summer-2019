@@ -23,23 +23,26 @@ svg {
   left: 0;
   top: 0;
 }
-a {
+text {
   display: none;
+  cursor: pointer;
+  stroke: none;
+  fill: #000000;
 }
-.bc:hover ~ a.bc,
-.ab:hover ~ a.ab,
-.sk:hover ~ a.sk,
-.mb:hover ~ a.mb,
-.on:hover ~ a.on,
-.qc:hover ~ a.qc,
-.ns:hover ~ a.ns,
-a.bc:hover,
-a.ab:hover,
-a.sk:hover,
-a.mb:hover,
-a.on:hover,
-a.qc:hover,
-a.ns:hover {
+.bc:hover ~ text.bc,
+.ab:hover ~ text.ab,
+.sk:hover ~ text.sk,
+.mb:hover ~ text.mb,
+.on:hover ~ text.on,
+.qc:hover ~ text.qc,
+.ns:hover ~ text.ns,
+text.bc:hover,
+text.ab:hover,
+text.sk:hover,
+text.mb:hover,
+text.on:hover,
+text.qc:hover,
+text.ns:hover {
   display: block;
 }
 path {
