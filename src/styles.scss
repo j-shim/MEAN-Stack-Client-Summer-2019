@@ -37,13 +37,13 @@ a:hover {
 
 // Styles for static.component.scss
 div#app-static-html {
-  background-image: url('assets/img/canorea-logo-white.jpg');
+  background-image: url('assets/img/watermark-20.png');
   background-repeat: no-repeat;
   // background-position: bottom;
-  background-position-x: 70%;
-  background-position-y: bottom;
+  background-position-x: 50%;
+  background-position-y: 60%;
   background-attachment: fixed;
-  background-size: 30%;
+  background-size: 100%;
   // background-origin: content-box;
   margin: 2rem;
   ul {
@@ -101,6 +101,9 @@ div#app-static-html {
   }
 
   div#app-static-html {
+    background-size: 47%;
+    background-position-x: 70%;
+    background-position-y: 100%;
     .flex-container {
       display: flex;
       flex-direction: row;
