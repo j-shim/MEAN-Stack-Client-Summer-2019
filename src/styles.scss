@@ -37,6 +37,14 @@ a:hover {
 
 // Styles for static.component.scss
 div#app-static-html {
+  background-image: url('assets/img/canorea-logo-white.jpg');
+  background-repeat: no-repeat;
+  // background-position: bottom;
+  background-position-x: 70%;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-size: 30%;
+  // background-origin: content-box;
   margin: 2rem;
   ul {
     margin-left: 1rem;
