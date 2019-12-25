@@ -68,11 +68,22 @@ div#app-static-html {
   a:hover {
     color: #007bff;
     word-wrap: break-word;
+    text-decoration: underline;
   }
   img {
     display: block;
     width: 100%;
     height: auto;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .flex-item {
+      width: 100%;
+    }
   }
 }
 
@@ -87,5 +98,20 @@ div#app-static-html {
   .c-col-side {
     flex: 0 0 $offset-percent;
     max-width: $offset-percent;
+  }
+
+  div#app-static-html {
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .flex-item {
+        width: 30%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
   }
 }
