@@ -13,7 +13,7 @@ export class BlogAlertComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._init();
+    // this._init();
   }
 
   private _init(): void {
