@@ -16,6 +16,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StaticComponent } from './components/static/static.component';
+import { BlogAlertComponent } from './components/blog-alert/blog-alert.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { StaticComponent } from './components/static/static.component';
     PostsComponent,
     ContactUsComponent,
     FooterComponent,
-    StaticComponent
+    StaticComponent,
+    BlogAlertComponent
   ],
   imports: [
     BrowserModule,

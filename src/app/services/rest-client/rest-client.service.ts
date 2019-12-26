@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
@@ -20,6 +20,16 @@ export class RestClientService {
 
   public getHtml(url: string): Observable<string> {
     return this._http.get(url, { responseType: 'text' }).pipe(
+      catchError(this._handleError)
+    );
+  }
+
+  public getBlogPage(url: string): Observable<any> {
+    const originUrl: string = '*';
+    const headers = new HttpHeaders()
+                    .set('Access-Control-Allow-Origin', originUrl);
+    
+    return this._http.get(url).pipe(
       catchError(this._handleError)
     );
   }
