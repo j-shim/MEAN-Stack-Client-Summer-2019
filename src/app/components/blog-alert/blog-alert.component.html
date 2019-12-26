@@ -1,1 +1,7 @@
-<p>blog-alert works!</p>
+<div>
+  <h3>블로그</h3>
+  <div *ngFor="let post of blogPosts">
+    <a target="_blank" [href]="post.link">{{post.text}}</a>
+    <br>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestClientService } from 'src/app/services/rest-client/rest-client.service';
+import { SETTINGS } from 'src/app/settings';
 
 @Component({
   selector: 'app-blog-alert',
@@ -8,18 +9,23 @@ import { RestClientService } from 'src/app/services/rest-client/rest-client.serv
 })
 export class BlogAlertComponent implements OnInit {
 
+  public blogPosts: Array<any> = [];
   constructor(
     private _restClientService: RestClientService
   ) { }
 
   ngOnInit() {
-    // this._init();
+    this._init();
   }
 
   private _init(): void {
-    const BLOG_URL: string = 'http://blog.naver.com/PostList.nhn?blogId=tourvancity&parentCategoryNo=16&skinType=&skinId=&from=menu';
-    this._restClientService.getBlogPage(BLOG_URL).subscribe(doc => {
-      console.log(doc);
+    const API_ENDPOINT: string = SETTINGS.BASE_URL + SETTINGS.API_BLOG_ALERTS;
+    this._restClientService.getHtml(API_ENDPOINT).subscribe(res => {
+      const parsedPosts: Array<any> = JSON.parse(res);
+      parsedPosts.forEach(post => {
+        post.link = `${SETTINGS.BLOG_BASE_URL}${post.link}`;
+      });
+      this.blogPosts = parsedPosts;
     });
   }
 }
