@@ -11,4 +11,5 @@ export class SETTINGS {
   public static API_USERS_LOGIN = '/api/users/authenticate';
   public static API_POSTS = '/api/posts/';
   public static API_BLOG_ALERTS = '/api/blogAlerts/';
+  public static API_BLOG_POSTS = '/api/blogPosts/';
 }
