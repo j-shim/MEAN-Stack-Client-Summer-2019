@@ -51,6 +51,8 @@
     .flex-item {
       width: 100%;
       flex-direction: row;
+      justify-content: start;
+      padding-left: 1rem;
 
       a {
         padding-top: 0.4rem;
