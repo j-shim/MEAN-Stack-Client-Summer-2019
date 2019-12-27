@@ -1,7 +1,7 @@
 <div>
-  <h3>블로그</h3>
-  <div *ngFor="let post of blogPosts">
-    <a target="_blank" [href]="post.link">{{post.text}}</a>
+  <h3>캐노리아 공지사항</h3>
+  <div *ngFor="let alert of blogAlerts">
+    <a target="_blank" [href]="alert.link">{{alert.text}}</a>
     <br>
   </div>
 </div>

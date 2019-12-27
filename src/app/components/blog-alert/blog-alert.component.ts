@@ -9,7 +9,7 @@ import { SETTINGS } from 'src/app/settings';
 })
 export class BlogAlertComponent implements OnInit {
 
-  public blogPosts: Array<any> = [];
+  public blogAlerts: Array<any> = [];
   constructor(
     private _restClientService: RestClientService
   ) { }
@@ -25,7 +25,7 @@ export class BlogAlertComponent implements OnInit {
       parsedPosts.forEach(post => {
         post.link = `${SETTINGS.BLOG_BASE_URL}${post.link}`;
       });
-      this.blogPosts = parsedPosts;
+      this.blogAlerts = parsedPosts;
     });
   }
 }
