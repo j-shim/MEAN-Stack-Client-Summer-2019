@@ -17,6 +17,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { FooterComponent } from './components/footer/footer.component';
 import { StaticComponent } from './components/static/static.component';
 import { BlogAlertComponent } from './components/blog-alert/blog-alert.component';
+import { BlogPostsComponent } from './components/blog-posts/blog-posts.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BlogAlertComponent } from './components/blog-alert/blog-alert.component
     ContactUsComponent,
     FooterComponent,
     StaticComponent,
-    BlogAlertComponent
+    BlogAlertComponent,
+    BlogPostsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+<div>
+  <h3>캐노리아 새 글</h3>
+  <div *ngFor="let post of blogPosts">
+    <a target="_blank" [href]="post.link">{{post.text}}</a>
+    <br>
+  </div>
+</div>
