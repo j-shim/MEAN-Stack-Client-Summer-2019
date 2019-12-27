@@ -18,11 +18,14 @@ export class StaticComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const pageId: string = this._route.snapshot.paramMap.get('id');
-    // this._alertService.alert(true, pageId);
-    this._restClientService.getHtml(`assets/static/${pageId}.html`).subscribe((res: string) => {
-      this.htmlString = res;
+    this._route.params.subscribe(routeParams => {
+      const pageId: string = routeParams.id;
+      this._restClientService.getHtml(`assets/static/${pageId}.html`).subscribe((res: string) => {
+        this.htmlString = res;
+      });
     });
+    // const pageId: string = this._route.snapshot.paramMap.get('id');
+    // this._alertService.alert(true, pageId);
   }
 
 }
