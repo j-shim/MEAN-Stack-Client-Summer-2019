@@ -96,10 +96,13 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-2">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">학생유학</a>
+              <a class="nav-link" [routerLink]="['/page', 'student-intro']">소개</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">부모동반유학</a>
+              <a class="nav-link" [routerLink]="['/page', 'student']">학생유학</a>
+            </div>
+            <div data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link" [routerLink]="['/page', 'parent']">부모동반유학</a>
             </div>
           </div>
         </div>
@@ -110,16 +113,16 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-3">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">대학진학과정 (UPP)</a>
+              <a class="nav-link" [routerLink]="['/page', 'upp']">대학진학과정 (UPP)</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">Co-op program</a>
+              <a class="nav-link" [routerLink]="['/page', 'co-op']">Co-op program</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">일반영어 (ESL)</a>
+              <a class="nav-link" [routerLink]="['/page', 'esl']">일반영어 (ESL)</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">캠프 (여름/겨울)</a>
+              <a class="nav-link" [routerLink]="['/page', 'camp']">캠프 (여름/겨울)</a>
             </div>
           </div>
         </div>
@@ -130,10 +133,10 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-4">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">(아직빈칸)</a>
+              <a class="nav-link" [routerLink]="['/page', '']">(아직빈칸)</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">(아직빈칸)</a>
+              <a class="nav-link" [routerLink]="['/page', '']">(아직빈칸)</a>
             </div>
           </div>
         </div>
@@ -144,10 +147,13 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-5">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">몬트리올</a>
+              <a class="nav-link" [routerLink]="['/page', 'education-intro']">소개</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/']">할리팩스</a>
+              <a class="nav-link" [routerLink]="['/page', '']">몬트리올</a>
+            </div>
+            <div data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link" [routerLink]="['/page', '']">할리팩스</a>
             </div>
           </div>
         </div>
@@ -165,15 +171,45 @@
               </a>
               <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-6-1">
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/']">empty</a>
+                  <a class="nav-link" [routerLink]="['/page', 'bc']">BC주</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/']">empty</a>
+                  <a class="nav-link" [routerLink]="['/page', 'on']">ON주</a>
+                </div>
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/page', 'ab']">AB주</a>
+                </div>
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/page', 'sk']">SK주</a>
+                </div>
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/page', 'mb']">MB주</a>
+                </div>
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/page', 'qc']">QC주</a>
+                </div>
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/page', 'ns']">NS주</a>
                 </div>
               </div>
             </div>
-            <div data-toggle="collapse" data-target=".navbar-collapse.show">
+            <!-- <div data-toggle="collapse" data-target=".navbar-collapse.show">
               <a class="nav-link" [routerLink]="['/']">사립학교</a>
+            </div> -->
+            <div>
+              <!-- <div data-toggle="collapse" data-target=".navbar-collapse.show"> -->
+              <a class="nav-link c-dropdown-toggle" data-toggle="collapse" data-target="#dropdown-menu-6-2"
+                aria-controls="dropdown-menu-6-2" aria-expanded="false" aria-label="Toggle Dropdown">
+                사립학교
+              </a>
+              <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-6-2">
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/page', 'private']">명문사립학교</a>
+                </div>
+                <div data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" [routerLink]="['/page', 'private-international']">국제사립학교</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
