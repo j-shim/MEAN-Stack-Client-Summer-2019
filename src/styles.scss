@@ -64,11 +64,15 @@ div#app-static-html {
     margin-left: -1rem;
   }
 
-  a,
-  a:hover {
+  a {
     color: #007bff;
     word-wrap: break-word;
-    text-decoration: underline;
+    text-decoration: none;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
   }
   img {
     display: block;
