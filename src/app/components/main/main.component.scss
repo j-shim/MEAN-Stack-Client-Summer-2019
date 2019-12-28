@@ -28,6 +28,8 @@ text {
   cursor: pointer;
   stroke: none;
   fill: #000000;
+  font-size: 0.22rem;
+  font-weight: bold;
 }
 .bc:hover ~ text.bc,
 .ab:hover ~ text.ab,
