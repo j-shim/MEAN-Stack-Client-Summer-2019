@@ -12,4 +12,5 @@ export class SETTINGS {
   public static API_POSTS = '/api/posts/';
   public static API_BLOG_ALERTS = '/api/blogAlerts/';
   public static API_BLOG_POSTS = '/api/blogPosts/';
+  public static API_MAILER = '/api/mailer';
 }
