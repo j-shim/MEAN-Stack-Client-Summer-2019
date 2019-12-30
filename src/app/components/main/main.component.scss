@@ -1,3 +1,5 @@
+@import 'src/variables';
+
 .c-container {
   position: relative;
   height: 0;
@@ -114,6 +116,23 @@ path {
   // stroke-dashoffset: 0;
 }
 
+.row {
+  .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: $width-md) {
+  .row {
+    .col-md-left {
+      padding-right: 1rem;
+    }
+    .col-md-right {
+      padding-left: 1rem;
+    }
+  }
+}
 // .flight {
 //   stroke-dasharray: 187;
 //   stroke-dashoffset: 187;
