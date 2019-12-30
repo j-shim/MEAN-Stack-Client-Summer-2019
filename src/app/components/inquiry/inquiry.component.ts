@@ -20,7 +20,7 @@ export class InquiryComponent implements OnInit {
     private _inquiryService: InquiryService,
     private _formBuilder: FormBuilder,
     private _router: Router
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.inquiryForm = this._formBuilder.group({
@@ -42,7 +42,9 @@ export class InquiryComponent implements OnInit {
       this._alertService.alert(false, '문의 내용이 올바르지 않습니다.');
       return;
     }
-    if (this._inquiryService.isTooEarlyToSubmitAgain(Date.now())) {
+    const currentTime: number = Date.now();
+    const isTooEarly: boolean = this._inquiryService.isTooEarlyToSubmitAgain(currentTime);
+    if (isTooEarly) {
       this._alertService.alert(false, '하루에 한번만 신청 가능합니다.');
       return;
     }

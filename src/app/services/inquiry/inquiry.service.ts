@@ -5,11 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class InquiryService {
 
-  private _submitTime: number;
+  // tslint:disable-next-line:no-inferrable-types
+  private _submitTime: number = 0;
 
-  constructor() {
-    this._submitTime = 0;
-  }
+  constructor() { }
 
   public isTooEarlyToSubmitAgain(currentTime: number): boolean {
     if (this._submitTime === 0) {
