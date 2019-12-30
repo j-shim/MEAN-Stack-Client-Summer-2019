@@ -128,21 +128,6 @@
               <a class="nav-link" [routerLink]="['/page', 'camp']">캠프 (여름/겨울)</a>
             </div>
           </div>
-
-        </div>
-        <div class="col-md-2">
-          <a class="nav-link c-dropdown-toggle" data-toggle="collapse" data-target="#dropdown-menu-4"
-            aria-controls="dropdown-menu-4" aria-expanded="false" aria-label="Toggle Dropdown">
-            대학프로그램
-          </a>
-          <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-4">
-            <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/inquiry']">문의하기</a>
-            </div>
-            <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', '']">(아직빈칸)</a>
-            </div>
-          </div>
         </div>
         <div class="col-md-2">
           <a class="nav-link c-dropdown-toggle" data-toggle="collapse" data-target="#dropdown-menu-5"
@@ -216,6 +201,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" [routerLink]="['/inquiry']">문의하기</a>
         </div>
       </div>
     </div>
