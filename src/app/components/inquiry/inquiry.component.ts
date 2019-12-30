@@ -52,7 +52,7 @@ export class InquiryComponent implements OnInit {
     this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_MAILER, { htmlString })
       .subscribe(resp => {
         this._alertService.alert(true, '신청이 성공적으로 완료 되었습니다.');
-        this._router.navigate(['/']);
+        // this._router.navigate(['/']);
       }, err => {
         console.error('Error on Inquiry:', err);
         this._alertService.alert(false, `문제가 발생하였습니다. 나중에 다시 시도하시기 바랍니다.`);
