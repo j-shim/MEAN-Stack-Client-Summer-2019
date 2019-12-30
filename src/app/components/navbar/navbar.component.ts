@@ -13,4 +13,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  public toggle(id: string): void {
+    const elem: Element = document.querySelector(id);
+    elem.classList.toggle('toggled');
+  }
 }

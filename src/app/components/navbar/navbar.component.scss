@@ -46,15 +46,17 @@
       text-align: center;
       // position: relative;
 
-      .collapsing { // override bootstrap
+      .collapsing {
+        // override bootstrap
         transition: none;
       }
 
-      .show { // override bootstrap
+      .show {
+        // override bootstrap
         display: none;
       }
 
-      >.c-dropdown-menu {
+      > .c-dropdown-menu {
         position: absolute;
         margin: 0;
         min-width: 100%;
@@ -63,8 +65,9 @@
         display: none !important;
         // transition: height .35s ease; // $transition-collapse from bootstrap
 
-        .c-dropdown-menu {
-          display: flex;
+        #dropdown-menu-6-1,
+        #dropdown-menu-6-2 {
+          display: none !important;
           flex-direction: column;
         }
         a {
@@ -73,6 +76,10 @@
       }
 
       &:hover .c-dropdown-menu {
+        display: flex !important;
+      }
+      & .c-dropdown-menu .c-dropdown-toggle-6-1.toggled #dropdown-menu-6-1,
+      & .c-dropdown-menu .c-dropdown-toggle-6-2.toggled #dropdown-menu-6-2 {
         display: flex !important;
       }
     }
