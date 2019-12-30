@@ -1,7 +1,11 @@
-<div>
-  <h3><strong>캐노리아 공지사항</strong></h3>
-  <div *ngFor="let alert of blogAlerts">
-    <a target="_blank" [href]="alert.link">{{alert.text}}</a>
-    <br>
-  </div>
-</div>
+<!-- <h3><strong>캐노리아 공지사항</strong></h3> -->
+<table>
+  <tr>
+    <th>캐노리아 공지사항</th>
+  </tr>
+  <tr *ngFor="let alert of blogAlerts">
+    <td>
+      <a target="_blank" [href]="alert.link">{{alert.text}}</a>
+    </td>
+  </tr>
+</table>
