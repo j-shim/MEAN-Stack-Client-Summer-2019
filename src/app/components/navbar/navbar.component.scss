@@ -67,8 +67,18 @@
 
         #dropdown-menu-6-1,
         #dropdown-menu-6-2 {
-          display: none !important;
+          display: flex;
           flex-direction: column;
+          overflow-y: hidden;
+          transition: height 0.35s ease;
+        }
+        #dropdown-menu-6-1:not(.toggled),
+        #dropdown-menu-6-2:not(.toggled) {
+          height: 0;
+        }
+        #dropdown-menu-6-1.toggled,
+        #dropdown-menu-6-2.toggled {
+          height: auto;
         }
         a {
           // text-align: center;
@@ -76,10 +86,6 @@
       }
 
       &:hover .c-dropdown-menu {
-        display: flex !important;
-      }
-      & .c-dropdown-menu .c-dropdown-toggle-6-1.toggled #dropdown-menu-6-1,
-      & .c-dropdown-menu .c-dropdown-toggle-6-2.toggled #dropdown-menu-6-2 {
         display: flex !important;
       }
     }
