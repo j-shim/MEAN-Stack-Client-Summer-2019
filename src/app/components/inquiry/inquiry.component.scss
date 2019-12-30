@@ -1,6 +1,13 @@
 @import 'src/variables';
 
 .c-container {
+  background-image: url('/assets/img/watermark-20.png');
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  background-position-x: 45vw;
+  background-position-y: 63vh;
+  background-attachment: fixed;
+
   margin: 2rem;
   .col-md {
     padding-left: 0;
@@ -27,6 +34,10 @@
 
 @media screen and (min-width: $width-md) {
   .c-container {
+    background-size: 25vw;
+    background-position-x: 60vw;
+    background-position-y: 45vh;
+
     .col-md-left {
       padding-right: 1rem;
       .c-departure-year {
