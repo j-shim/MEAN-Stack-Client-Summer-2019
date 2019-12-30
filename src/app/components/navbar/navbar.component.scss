@@ -48,7 +48,7 @@
 
       .collapsing {
         // override bootstrap
-        transition: none;
+        transition: none !important;
       }
 
       .show {
@@ -70,7 +70,7 @@
           display: flex;
           flex-direction: column;
           overflow-y: hidden;
-          transition: height 0.35s ease;
+          transition: height 0.35s ease !important;
         }
         #dropdown-menu-6-1:not(.toggled),
         #dropdown-menu-6-2:not(.toggled) {
