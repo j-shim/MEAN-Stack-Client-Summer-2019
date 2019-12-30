@@ -1,0 +1,96 @@
+<div class="c-container">
+  <br>
+  <h2>문의하기</h2>
+  <p></p>
+  <hr>
+  <form (ngSubmit)="onSubmit()" [formGroup]="inquiryForm">
+    <div class="row">
+      <div class="col-md col-md-left">
+        <div class="form-group">
+          <label for="inquiryType">상담유형</label>
+          <select class="form-control" id="inquiryType" required formControlName="inquiryType">
+            <option value="" selected disabled>상담유형 선택</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">이름</label>
+          <input type="text" class="form-control" id="name" placeholder="이름을 입력해주세요." required formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요." required
+            formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="tel">연락처</label>
+          <input type="tel" class="form-control" id="tel" placeholder="연락처를 입력해주세요." required formControlName="tel">
+        </div>
+        <div class="form-group">
+          <label for="year">출국 희망시기</label>
+          <div class="row">
+            <div class="col-md c-departure-year">
+              <select class="form-control" id="year" required formControlName="departureYear">
+                <option value="" selected disabled>년도를 선택해주세요.</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+              </select>
+            </div>
+            <div class="col-md c-departure-month">
+              <select class="form-control" id="month" required formControlName="departureMonth">
+                <option value="" selected disabled>월을 선택해주세요.</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md col-md-right">
+        <div class="form-group">
+          <label for="inlineRadioOptions">방문/전화</label>
+          <div class="visit-or-call">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineRadio1" value="방문상담" formControlName="visitOrCall">
+              <label class="form-check-label" for="inlineRadio1">방문상담</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineRadio2" value="전화상담" formControlName="visitOrCall">
+              <label class="form-check-label" for="inlineRadio2">전화상담</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="date">상담희망일자</label>
+          <input type="date" class="form-control" id="date" placeholder="날짜를 선택해주세요." required formControlName="date">
+        </div>
+
+        <div class="form-group">
+          <label for="body">문의내용</label>
+          <textarea rows="6" class="form-control" id="body" placeholder="내용을 입력해주세요." required
+            formControlName="body"></textarea>
+        </div>
+        <button type="submit" class="btn">상담 및 방문예약 신청</button>
+        <!-- [disabled]="!inquiryForm.valid"  -->
+      </div>
+    </div>
+  </form>
+</div>

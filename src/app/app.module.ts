@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { StaticComponent } from './components/static/static.component';
 import { BlogAlertComponent } from './components/blog-alert/blog-alert.component';
 import { BlogPostsComponent } from './components/blog-posts/blog-posts.component';
+import { InquiryComponent } from './components/inquiry/inquiry.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BlogPostsComponent } from './components/blog-posts/blog-posts.component
     FooterComponent,
     StaticComponent,
     BlogAlertComponent,
-    BlogPostsComponent
+    BlogPostsComponent,
+    InquiryComponent
   ],
   imports: [
     BrowserModule,

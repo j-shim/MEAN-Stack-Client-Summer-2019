@@ -1,0 +1,46 @@
+@import 'src/variables';
+
+.c-container {
+  margin: 2rem;
+  .col-md {
+    padding-left: 0;
+    padding-right: 0;
+
+    .c-departure-year {
+      padding-bottom: 0.3rem;
+    }
+    .form-control:focus {
+      border-color: #e0ab87;
+      box-shadow: 0 0 0 0.2rem rgba(245, 150, 62, 0.25);
+    }
+    .visit-or-call {
+      padding-left: 1rem;
+    }
+
+    .btn {
+      background-color: #666;
+      color: white;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: $width-md) {
+  .c-container {
+    .col-md-left {
+      padding-right: 1rem;
+      .c-departure-year {
+        padding-right: 0.5rem;
+      }
+      .c-departure-month {
+        padding-left: 0.5rem;
+      }
+    }
+    .col-md-right {
+      padding-left: 1rem;
+      .btn {
+        margin-top: 0.65rem;
+      }
+    }
+  }
+}
