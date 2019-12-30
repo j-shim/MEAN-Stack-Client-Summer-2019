@@ -1,12 +1,18 @@
 @import 'src/variables';
 
 .c-container {
-  background-image: url('/assets/img/watermark-20.png');
-  background-repeat: no-repeat;
-  background-size: 50vw;
-  background-position-x: 45vw;
-  background-position-y: 63vh;
-  background-attachment: fixed;
+  &::before {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 45vw;
+    top: 61vh;
+    width: 50vw;
+    height: 50vw;
+    z-index: -10;
+    background: url('/assets/img/watermark-20.png');
+    background-size: cover;
+  }
 
   margin: 2rem;
   .col-md {
@@ -34,9 +40,12 @@
 
 @media screen and (min-width: $width-md) {
   .c-container {
-    background-size: 25vw;
-    background-position-x: 60vw;
-    background-position-y: 45vh;
+    &::before {
+      left: 60vw;
+      top: 45vh;
+      width: 25vw;
+      height: 25vw;
+    }
 
     .col-md-left {
       padding-right: 1rem;
