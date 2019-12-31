@@ -539,9 +539,8 @@
 
 </div>
 
-<div class="jumbotron text-center" *ngIf="!userService.isUserLoggedIn">
-  <h1>Home Page</h1>
-  <p>홈페이지</p>
+<div>
+  <app-carousel></app-carousel>
 </div>
 
 <div class="jumbotron text-center" *ngIf="userService.isUserLoggedIn">

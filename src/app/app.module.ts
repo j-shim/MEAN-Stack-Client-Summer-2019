@@ -19,6 +19,7 @@ import { StaticComponent } from './components/static/static.component';
 import { BlogAlertComponent } from './components/blog-alert/blog-alert.component';
 import { BlogPostsComponent } from './components/blog-posts/blog-posts.component';
 import { InquiryComponent } from './components/inquiry/inquiry.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { InquiryComponent } from './components/inquiry/inquiry.component';
     StaticComponent,
     BlogAlertComponent,
     BlogPostsComponent,
-    InquiryComponent
+    InquiryComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
