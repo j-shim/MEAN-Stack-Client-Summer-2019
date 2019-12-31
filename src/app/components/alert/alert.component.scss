@@ -1,3 +1,5 @@
+@import 'src/variables';
+
 // .success {
 //   background-color: #12e78e;
 // }
@@ -5,3 +7,18 @@
 // .error {
 //   background-color: #fc8989;
 // }
+
+.c-container {
+  position: fixed;
+  left: 10vw;
+  top: 5rem;
+  width: 80vw;
+  z-index: 2000; // .sticky-top in NavbarComponent has z-index of 1020
+}
+
+@media screen and (min-width: $width-md) {
+  .c-container {
+    left: 12vw; // refer to variables.scss
+    width: 76vw; // refer to variables.scss
+  }
+}
