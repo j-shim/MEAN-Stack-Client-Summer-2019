@@ -6,4 +6,5 @@ div {
 #app-contact-us {
   position: sticky;
   bottom: 0;
+  z-index: 10; // CarouselComponent has prev/next arrows with z-index of 1
 }
