@@ -37,6 +37,12 @@ a:hover {
   //
 }
 
+.btn {
+  &:focus {
+    border-color: #e0ab87;
+    box-shadow: 0 0 0 0.2rem rgba(245, 150, 62, 0.25);
+  }
+}
 // Styles for static.component.scss
 div#app-static-html {
   // background-image: url('assets/img/watermark-20.png');
