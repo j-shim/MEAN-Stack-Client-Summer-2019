@@ -10,6 +10,8 @@ import { SETTINGS } from 'src/app/settings';
 export class BlogAlertComponent implements OnInit {
 
   public blogAlerts: Array<any> = [];
+  // tslint:disable-next-line:no-inferrable-types
+  public isLoadingError: boolean = false;
   constructor(
     private _restClientService: RestClientService
   ) { }
@@ -18,14 +20,22 @@ export class BlogAlertComponent implements OnInit {
     this._init();
   }
 
+  public onRefreshClick(): void {
+    this._init();
+  }
+
   private _init(): void {
     const API_ENDPOINT: string = SETTINGS.BASE_URL + SETTINGS.API_BLOG_ALERTS;
     this._restClientService.getHtml(API_ENDPOINT).subscribe(res => {
       const parsedPosts: Array<any> = JSON.parse(res);
-      parsedPosts.forEach(post => {
-        post.link = `${SETTINGS.BLOG_BASE_URL}${post.link}`;
-      });
+      for (let i = 0; i < parsedPosts.length; i++) { // IE11 support
+        parsedPosts[i].link = `${SETTINGS.BLOG_BASE_URL}${parsedPosts[i].link}`;
+      }
       this.blogAlerts = parsedPosts;
+      this.isLoadingError = false;
+    }, err => {
+      console.error(err);
+      this.isLoadingError = true;
     });
   }
 }

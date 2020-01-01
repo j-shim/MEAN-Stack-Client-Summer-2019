@@ -1,11 +1,13 @@
-<!-- <h3><strong>캐노리아 공지사항</strong></h3> -->
-<table>
-  <tr>
-    <th>캐노리아 공지사항</th>
-  </tr>
-  <tr *ngFor="let alert of blogAlerts">
-    <td>
+<div class="c-container">
+  <h3><strong>캐노리아 공지사항</strong></h3>
+  <div *ngIf="isLoadingError">
+    <span>데이터 로드 에러:</span>
+    <button class="btn" (click)="onRefreshClick()">새로고침</button>
+  </div>
+  <div *ngIf="!isLoadingError">
+    <div class="c-blog" *ngFor="let alert of blogAlerts">
       <a target="_blank" [href]="alert.link">{{alert.text}}</a>
-    </td>
-  </tr>
-</table>
+      <br>
+    </div>
+  </div>
+</div>

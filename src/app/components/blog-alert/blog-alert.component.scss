@@ -1,26 +1,22 @@
-table {
+.c-container {
   margin-bottom: 2rem;
   width: 100%;
 }
-
-th {
-  font-size: 1.8rem;
-}
-
-td,
-th {
-  border: 1px solid #f3c7bb;
-  text-align: left;
-  padding: 0.5rem;
-}
-
-tr:nth-child(even) {
+.btn {
   background-color: #f3c7bb;
 }
+.c-blog {
+  display: flex;
+  border: 1px solid #dddddd;
 
+  &:nth-child(odd) {
+    background-color: #f3c7bb;
+  }
+}
 a {
   color: #007bff;
   text-decoration: none;
+  padding: 0.5rem;
 
   &:hover {
     color: #0056b3;

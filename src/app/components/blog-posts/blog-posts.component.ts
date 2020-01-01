@@ -10,6 +10,8 @@ import { SETTINGS } from 'src/app/settings';
 export class BlogPostsComponent implements OnInit {
 
   public blogPosts: Array<any> = [];
+  // tslint:disable-next-line:no-inferrable-types
+  public isLoadingError: boolean = false;
   constructor(
     private _restClientService: RestClientService
   ) { }
@@ -18,12 +20,19 @@ export class BlogPostsComponent implements OnInit {
     this._init();
   }
 
+  public onRefreshClick(): void {
+    this._init();
+  }
+
   private _init(): void {
     const API_ENDPOINT: string = SETTINGS.BASE_URL + SETTINGS.API_BLOG_POSTS;
     this._restClientService.getHtml(API_ENDPOINT).subscribe(res => {
       const parsedPosts: Array<any> = JSON.parse(res);
       this.blogPosts = parsedPosts;
+      this.isLoadingError = false;
+    }, err => {
+      console.error(err);
+      this.isLoadingError = true;
     });
   }
-
 }
