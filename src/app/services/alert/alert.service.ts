@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AlertService {
 
+  private _timeoutId = undefined;
   // tslint:disable-next-line:no-inferrable-types
   public isSuccess: boolean = true;
   // tslint:disable-next-line:no-inferrable-types
@@ -17,10 +18,15 @@ export class AlertService {
     this.message = message;
 
     // tslint:disable-next-line:no-inferrable-types
-    const activeTime: number = 10000;
+    const activeTime: number = 10000; // disappear in 10 sec
 
-    setTimeout(() => {
+    if (typeof this._timeoutId === 'number') {
+      clearTimeout(this._timeoutId);
+    }
+
+    this._timeoutId = setTimeout(() => {
       this.message = '';
+      this._timeoutId = undefined;
     }, activeTime);
   }
 }
