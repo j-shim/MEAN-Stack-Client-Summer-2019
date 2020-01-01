@@ -1,5 +1,8 @@
 @import 'src/variables';
 
+* {
+  z-index: 1;
+}
 .c-container {
   position: relative;
   height: 0;

@@ -1,5 +1,8 @@
 @import 'src/variables';
 
+* {
+  z-index: 1030; // Bootstrap's sticky-top class has z-index of 1020
+}
 .navbar {
   padding: 0rem 1rem;
   background-color: $theme-primary;
