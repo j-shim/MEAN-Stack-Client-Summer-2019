@@ -21,9 +21,10 @@ export class NavbarComponent implements OnInit {
     console.log(`Event binding: ${eventBinding}`);
     console.log(event);
     console.log(event.type);
-    alert(`Testing:
-            Event binding: ${eventBinding},
-            Event fired: ${event},
-            Event type: ${event.type}`);
+    // alert(`Testing:
+    //         Event binding: ${eventBinding},
+    //         Event fired: ${event},
+    //         Event type: ${event.type}`);
+    document.body.click();
   }
 }
