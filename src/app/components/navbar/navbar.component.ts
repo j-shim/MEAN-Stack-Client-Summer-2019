@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
     const elem: HTMLElement = document.getElementById(id);
     elem.classList.toggle('toggled');
   }
-  public test(eventBinding: string, event: any): void {
+  public test(eventBinding: string, event: any, id: string): void {
     console.log(`Event binding: ${eventBinding}`);
     console.log(event);
     console.log(event.type);
@@ -25,6 +25,13 @@ export class NavbarComponent implements OnInit {
     //         Event binding: ${eventBinding},
     //         Event fired: ${event},
     //         Event type: ${event.type}`);
-    document.body.click();
+    if (eventBinding === 'click1') {
+      document.getElementById(id)['style']['display'] = 'none !important';
+    }
+    else if (eventBinding === 'click2') {
+      setTimeout(() => {
+        document.getElementById(id)['style']['display'] = 'none !important';
+      }, 1000);
+    }
   }
 }
