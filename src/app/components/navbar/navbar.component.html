@@ -113,10 +113,10 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-3">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'language-school']">어학원</a>
+              <a class="nav-link" [routerLink]="['/page', 'language-school']" (click)="test('click', $event)">어학원</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'upp']">대학진학과정 (UPP)</a>
+              <a class="nav-link" [routerLink]="['/page', 'upp']" (touchend)="test('touchend', $event)">대학진학과정 (UPP)</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
               <a class="nav-link" [routerLink]="['/page', 'co-op']">Co-op program</a>
