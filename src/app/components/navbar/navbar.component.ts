@@ -33,5 +33,7 @@ export class NavbarComponent implements OnInit {
         document.getElementById(id)['style']['display'] = 'none !important';
       }, 1000);
     }
+    const toggler = document.querySelector('.navbar-toggler');
+    toggler['checked'] = false;
   }
 }
