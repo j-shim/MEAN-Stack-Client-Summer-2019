@@ -28,6 +28,15 @@ svg {
   left: 0;
   top: 0;
 }
+rect.province {
+  fill: #ffffff;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  &:focus {
+    outline: none;
+  }
+}
 text {
   display: none;
   cursor: pointer;
