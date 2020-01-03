@@ -9,7 +9,7 @@ import { SETTINGS } from 'src/app/settings';
 })
 export class BlogAlertComponent implements OnInit {
 
-  public blogAlerts: Array<any> = [];
+  public blogAlerts = [];
   // tslint:disable-next-line:no-inferrable-types
   public isLoadingError: boolean = false;
   constructor(
@@ -27,7 +27,7 @@ export class BlogAlertComponent implements OnInit {
   private _init(): void {
     const API_ENDPOINT: string = SETTINGS.BASE_URL + SETTINGS.API_BLOG_ALERTS;
     this._restClientService.getHtml(API_ENDPOINT).subscribe(res => {
-      const parsedPosts: Array<any> = JSON.parse(res);
+      const parsedPosts = JSON.parse(res);
       for (let i = 0; i < parsedPosts.length; i++) { // IE11 support
         parsedPosts[i].link = `${SETTINGS.BLOG_BASE_URL}${parsedPosts[i].link}`;
       }
