@@ -4,10 +4,11 @@
     <span>데이터 로드 에러:</span>
     <button class="btn" (click)="onRefreshClick()">새로고침</button>
   </div>
-  <div *ngIf="!isLoadingError">
-    <div class="c-blog" *ngFor="let post of blogPosts">
-      <a target="_blank" [href]="post.link">{{post.text}}</a>
-      <br>
-    </div>
+  <div *ngIf="!isLoadingError && blogPosts.length > 0">
+    <a target="_blank" [href]="blogPosts[0].link">{{blogPosts[0].text}}</a>
+    <a target="_blank" [href]="blogPosts[1].link">{{blogPosts[1].text}}</a>
+    <a target="_blank" [href]="blogPosts[2].link">{{blogPosts[2].text}}</a>
+    <a target="_blank" [href]="blogPosts[3].link">{{blogPosts[3].text}}</a>
+    <a target="_blank" [href]="blogPosts[4].link">{{blogPosts[4].text}}</a>
   </div>
 </div>
