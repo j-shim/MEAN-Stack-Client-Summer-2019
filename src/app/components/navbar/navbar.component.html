@@ -88,7 +88,7 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-1">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'about']">소개</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'about']">소개</a>
             </div>
             <!-- <div data-toggle="collapse" data-target=".navbar-collapse.show">
               <a class="nav-link" [routerLink]="['/boards/1']">Board1(나중에지움)</a>
@@ -102,13 +102,13 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-2">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'student-intro']">소개</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'student-intro']">소개</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'student']">학생유학</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'student']">학생유학</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'parent']">부모동반유학</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'parent']">부모동반유학</a>
             </div>
           </div>
         </div>
@@ -119,21 +119,19 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-3">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'language-school']"
-                (click)="test('click1', $event, 'dropdown-menu-3')">어학원</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'language-school']">어학원</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'upp']"
-                (click)="test('click2', $event, 'dropdown-menu-3')">대학진학과정 (UPP)</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'upp']">대학진학과정 (UPP)</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'co-op']">Co-op program</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'co-op']">Co-op program</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'esl']">일반영어 (ESL)</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'esl']">일반영어 (ESL)</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'camp']">캠프 (여름/겨울)</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'camp']">캠프 (여름/겨울)</a>
             </div>
           </div>
         </div>
@@ -144,13 +142,13 @@
           </a>
           <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-5">
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', 'education-intro']">소개</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'education-intro']">소개</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', '']">몬트리올</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', '']">몬트리올</a>
             </div>
             <div data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" [routerLink]="['/page', '']">할리팩스</a>
+              <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', '']">할리팩스</a>
             </div>
           </div>
         </div>
@@ -168,25 +166,25 @@
               </a>
               <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-6-1">
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'school-bc']">BC주</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'school-bc']">BC주</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'school-on']">ON주</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'school-on']">ON주</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'school-ab']">AB주</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'school-ab']">AB주</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'school-sk']">SK주</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'school-sk']">SK주</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'school-mb']">MB주</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'school-mb']">MB주</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'school-qc']">QC주</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'school-qc']">QC주</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'school-ns']">NS주</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'school-ns']">NS주</a>
                 </div>
               </div>
             </div>
@@ -201,17 +199,18 @@
               </a>
               <div class="collapse navbar-collapse c-dropdown-menu" id="dropdown-menu-6-2">
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'private']">명문사립학교</a>
+                  <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/page', 'private']">명문사립학교</a>
                 </div>
                 <div data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <a class="nav-link" [routerLink]="['/page', 'private-international']">국제사립학교</a>
+                  <a class="nav-link" (click)="onLinkClick()"
+                    [routerLink]="['/page', 'private-international']">국제사립학교</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" [routerLink]="['/inquiry']">문의하기</a>
+          <a class="nav-link" (click)="onLinkClick()" [routerLink]="['/inquiry']">문의하기</a>
         </div>
       </div>
     </div>
