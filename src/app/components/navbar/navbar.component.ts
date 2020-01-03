@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  public toggle(id: string): void {
+  public toggleDoubleDropdown(id: string): void {
     const elem: HTMLElement = document.getElementById(id);
     elem.classList.toggle('toggled');
   }
