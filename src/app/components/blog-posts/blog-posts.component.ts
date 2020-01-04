@@ -26,9 +26,12 @@ export class BlogPostsComponent implements OnInit {
 
   private _init(): void {
     const API_ENDPOINT: string = SETTINGS.BASE_URL + SETTINGS.API_BLOG_POSTS;
+    console.log('test 1');
     this._restClientService.getHtml(API_ENDPOINT).subscribe(res => {
-      const parsedPosts = JSON.parse(res);
-      this.blogPosts = parsedPosts;
+    console.log('test 2');
+    const parsedPosts = JSON.parse(res);
+    console.log('test 3');
+    this.blogPosts = parsedPosts;
       this.isLoadingError = false;
     }, err => {
       console.error(err);

@@ -30,6 +30,7 @@ export class MainComponent implements OnInit {
     for (let i = 0; i < mapElem.length; i++) {
       if (mapElem[i].classList.value.indexOf(prov[0][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
+          console.log('test 4');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
             mapProvinceElem[j]['style']['fill'] = '#c75a4e';
