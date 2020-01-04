@@ -18,8 +18,30 @@
  * BROWSER POLYFILLS
  */
 
+ /** IE9, IE10 and IE11 requires all of the following polyfills. **/
+import 'core-js/es/symbol';
+import 'core-js/es/object';
+import 'core-js/es/function';
+import 'core-js/es/parse-int';
+import 'core-js/es/parse-float';
+import 'core-js/es/number';
+import 'core-js/es/math';
+import 'core-js/es/string';
+import 'core-js/es/date';
+import 'core-js/es/array';
+import 'core-js/es/regexp';
+import 'core-js/es/map';
+import 'core-js/es/weak-map';
+import 'core-js/es/set';
+
+/** Issue with IE and FormData **/
+import 'formdata-polyfill';
+
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 import 'classlist.js';  // Run `npm install --save classlist.js`.
+
+/** IE10 and IE11 requires the following for the Reflect API. */
+import 'core-js/es/reflect';
 
 /**
  * Web Animations `@angular/platform-browser/animations`
@@ -51,6 +73,7 @@ import 'web-animations-js';  // Run `npm install --save web-animations-js`.
  *  (window as any).__Zone_enable_cross_context_check = true;
  *
  */
+import './zone-flags.ts';
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
@@ -61,3 +84,13 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+// Custom Elements polyfill. Required for browsers that do not natively support Custom Elements.
+import '@webcomponents/custom-elements';
+// Custom Element ES5 shim. Required for browsers that natively support Custom Elements, but do not
+// support ES2015 modules.
+// NOTE: Chrome, Firefox and Safari should not need this, because they added support for ES2015
+//       modules before Custom Elements. It is still required for some other (less common) browsers:
+//       - UC browser for android 11.8 (~3.5% global usage)
+//       - Samsung browser 5.0-8.1 (~0.43% global usage)
+//       - Opera 41-47 (~0.02% global usage)
+import '@webcomponents/custom-elements/src/native-shim';
