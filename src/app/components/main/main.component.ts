@@ -28,6 +28,8 @@ export class MainComponent implements OnInit {
     const mapElem = document.querySelectorAll('.province');
     // Use for loop for IE browser support
     for (let i = 0; i < mapElem.length; i++) {
+      console.log(mapElem);
+      console.log(mapElem[i]);
       if (mapElem[i]['classList']['value'].indexOf(prov[0][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           console.log('test 4');
@@ -139,10 +141,14 @@ export class MainComponent implements OnInit {
   }
 
   private _setPathTransition(): void { // ignore all the errors, it's working
+    console.log('test 5');
     const provinceElem = document.getElementsByClassName('province');
+    console.log('test 6');
     // Use for loop for IE browser support
     for (let i = 0; i < provinceElem.length; i++) {
+      console.log('test 7');
       if (provinceElem[i]['classList']['value'].indexOf(prov[0][0]) > -1) {
+        console.log('test 8');
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[0][1]);
           for (let j = 0; j < pathElem.length; j++) {
