@@ -29,6 +29,7 @@ export class MainComponent implements OnInit {
     // Use for loop for IE browser support
     for (let i = 0; i < mapElem.length; i++) {
       console.log(mapElem);
+      debugger;
       console.log(mapElem[i]);
       if (mapElem[i]['classList']['value'].indexOf(prov[0][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
