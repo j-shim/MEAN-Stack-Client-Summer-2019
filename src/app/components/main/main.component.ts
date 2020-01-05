@@ -28,20 +28,23 @@ export class MainComponent implements OnInit {
     const mapElem = document.querySelectorAll('.province');
     // Use for loop for IE browser support
     for (let i = 0; i < mapElem.length; i++) {
-      console.log(mapElem);
-      console.log(mapElem[i]);
       if (mapElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
+        console.log('test 4');
         mapElem[i].addEventListener('mouseover', () => {
-          console.log('test 4');
+          console.log('test 5');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
+          console.log('test 6');
           for (let j = 0; j < mapProvinceElem.length; j++) {
             mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            console.log('test 7');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
+          console.log('test 8');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
             mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
+            console.log('test 9');
           }
         });
       } else if (mapElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
@@ -127,14 +130,10 @@ export class MainComponent implements OnInit {
   }
 
   private _setPathTransition(): void { // ignore all the errors, it's working
-    console.log('test 5');
     const provinceElem = document.getElementsByClassName('province');
-    console.log('test 6');
     // Use for loop for IE browser support
     for (let i = 0; i < provinceElem.length; i++) {
-      console.log('test 7');
       if (provinceElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
-        console.log('test 8');
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[0][1]);
           for (let j = 0; j < pathElem.length; j++) {
