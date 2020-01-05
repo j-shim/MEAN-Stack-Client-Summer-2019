@@ -72,7 +72,7 @@ path {
   // path.on:hover ~ circle.on {
   &:not(.flight-path):hover {
     fill: #c75a4e;
-    transform: translate(-1px, -1px);
+    transform: translateX(-1px), translateY(-1px);
   }
 
   &.victoria,
