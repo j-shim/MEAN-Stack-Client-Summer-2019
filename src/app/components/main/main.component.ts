@@ -35,7 +35,8 @@ export class MainComponent implements OnInit {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
           console.log('test 6');
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            // mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElem[j].setAttribute('transform', 'translate(-1px, -1px);');
             console.log('test 7');
           }
         });
