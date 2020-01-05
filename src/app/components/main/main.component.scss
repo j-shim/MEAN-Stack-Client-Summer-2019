@@ -62,7 +62,7 @@ text.ns:hover {
   display: block;
 }
 path {
-  transition: all 0.5s ease;
+  transition: fill 0.5s ease, transform 0.5s ease;
 
   // path:not(.flight):hover,
   // path.bc:hover ~ circle.bc,
