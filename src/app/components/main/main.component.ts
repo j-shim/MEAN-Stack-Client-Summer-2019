@@ -31,7 +31,7 @@ export class MainComponent implements OnInit {
       console.log(mapElem);
       debugger;
       console.log(mapElem[i]);
-      if (mapElem[i]['classList']['value'].indexOf(prov[0][0]) > -1) {
+      if (mapElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           console.log('test 4');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
@@ -47,7 +47,7 @@ export class MainComponent implements OnInit {
             mapProvinceElem[j]['style']['transform'] = 'none';
           }
         });
-      } else if (mapElem[i]['classList']['value'].indexOf(prov[1][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
@@ -62,7 +62,7 @@ export class MainComponent implements OnInit {
             mapProvinceElem[j]['style']['transform'] = 'none';
           }
         });
-      } else if (mapElem[i]['classList']['value'].indexOf(prov[2][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[2][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
@@ -77,7 +77,7 @@ export class MainComponent implements OnInit {
             mapProvinceElem[j]['style']['transform'] = 'none';
           }
         });
-      } else if (mapElem[i]['classList']['value'].indexOf(prov[3][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[3][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
@@ -92,7 +92,7 @@ export class MainComponent implements OnInit {
             mapProvinceElem[j]['style']['transform'] = 'none';
           }
         });
-      } else if (mapElem[i]['classList']['value'].indexOf(prov[4][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[4][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
@@ -107,7 +107,7 @@ export class MainComponent implements OnInit {
             mapProvinceElem[j]['style']['transform'] = 'none';
           }
         });
-      } else if (mapElem[i]['classList']['value'].indexOf(prov[5][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[5][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
@@ -122,7 +122,7 @@ export class MainComponent implements OnInit {
             mapProvinceElem[j]['style']['transform'] = 'none';
           }
         });
-      } else if (mapElem[i]['classList']['value'].indexOf(prov[6][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[6][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
@@ -148,7 +148,7 @@ export class MainComponent implements OnInit {
     // Use for loop for IE browser support
     for (let i = 0; i < provinceElem.length; i++) {
       console.log('test 7');
-      if (provinceElem[i]['classList']['value'].indexOf(prov[0][0]) > -1) {
+      if (provinceElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
         console.log('test 8');
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[0][1]);
@@ -164,7 +164,7 @@ export class MainComponent implements OnInit {
             pathElem[j]['style']['stroke-dashoffset'] = prov[0][2];
           }
         });
-      } else if (provinceElem[i]['classList']['value'].indexOf(prov[1][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[1][1]);
           for (let j = 0; j < pathElem.length; j++) {
@@ -179,7 +179,7 @@ export class MainComponent implements OnInit {
             pathElem[j]['style']['stroke-dashoffset'] = prov[1][2];
           }
         });
-      } else if (provinceElem[i]['classList']['value'].indexOf(prov[2][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[2][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[2][1]);
           for (let j = 0; j < pathElem.length; j++) {
@@ -194,7 +194,7 @@ export class MainComponent implements OnInit {
             pathElem[j]['style']['stroke-dashoffset'] = prov[2][2];
           }
         });
-      } else if (provinceElem[i]['classList']['value'].indexOf(prov[3][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[3][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[3][1]);
           for (let j = 0; j < pathElem.length; j++) {
@@ -209,7 +209,7 @@ export class MainComponent implements OnInit {
             pathElem[j]['style']['stroke-dashoffset'] = prov[3][2];
           }
         });
-      } else if (provinceElem[i]['classList']['value'].indexOf(prov[4][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[4][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[4][1]);
           for (let j = 0; j < pathElem.length; j++) {
@@ -224,7 +224,7 @@ export class MainComponent implements OnInit {
             pathElem[j]['style']['stroke-dashoffset'] = prov[4][2];
           }
         });
-      } else if (provinceElem[i]['classList']['value'].indexOf(prov[5][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[5][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[5][1]);
           for (let j = 0; j < pathElem.length; j++) {
@@ -239,7 +239,7 @@ export class MainComponent implements OnInit {
             pathElem[j]['style']['stroke-dashoffset'] = prov[5][2];
           }
         });
-      } else if (provinceElem[i]['classList']['value'].indexOf(prov[6][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[6][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[6][1]);
           for (let j = 0; j < pathElem.length; j++) {
