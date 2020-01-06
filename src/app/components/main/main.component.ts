@@ -28,109 +28,102 @@ export class MainComponent implements OnInit {
     const mapElem = document.querySelectorAll('.province');
     // Use for loop for IE browser support
     for (let i = 0; i < mapElem.length; i++) {
-      if (mapElem[i].classList.value.indexOf(prov[0][0]) > -1) {
+      if (mapElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
+        console.log('test 4');
         mapElem[i].addEventListener('mouseover', () => {
+          console.log('test 5');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
+          console.log('test 6');
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
-            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+            // mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElem[j].setAttribute('transform', 'translate(-1px, -1px);');
+            console.log('test 7');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
+          console.log('test 8');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
-            mapProvinceElem[j]['style']['transform'] = 'none';
+            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
+            console.log('test 9');
           }
         });
-      } else if (mapElem[i].classList.value.indexOf(prov[1][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
-            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
-            mapProvinceElem[j]['style']['transform'] = 'none';
+            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
           }
         });
-      } else if (mapElem[i].classList.value.indexOf(prov[2][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[2][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
-            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
-            mapProvinceElem[j]['style']['transform'] = 'none';
+            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
           }
         });
-      } else if (mapElem[i].classList.value.indexOf(prov[3][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[3][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
-            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
-            mapProvinceElem[j]['style']['transform'] = 'none';
+            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
           }
         });
-      } else if (mapElem[i].classList.value.indexOf(prov[4][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[4][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
-            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
-            mapProvinceElem[j]['style']['transform'] = 'none';
+            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
           }
         });
-      } else if (mapElem[i].classList.value.indexOf(prov[5][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[5][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
-            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
-            mapProvinceElem[j]['style']['transform'] = 'none';
+            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
           }
         });
-      } else if (mapElem[i].classList.value.indexOf(prov[6][0]) > -1) {
+      } else if (mapElem[i].getAttribute('class').indexOf(prov[6][0]) > -1) {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = '#c75a4e';
-            mapProvinceElem[j]['style']['transform'] = 'translate(-1px, -1px)';
+            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j]['style']['fill'] = 'url(#grad1)';
-            mapProvinceElem[j]['style']['transform'] = 'none';
+            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
           }
         });
       }
@@ -141,109 +134,95 @@ export class MainComponent implements OnInit {
     const provinceElem = document.getElementsByClassName('province');
     // Use for loop for IE browser support
     for (let i = 0; i < provinceElem.length; i++) {
-      if (provinceElem[i].classList.value.indexOf(prov[0][0]) > -1) {
+      if (provinceElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[0][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j]['style']['stroke-dashoffset'] = '0';
+            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[0][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'none';
-            pathElem[j]['style']['stroke-dashoffset'] = prov[0][2];
+            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[0][2]};`);
           }
         });
-      } else if (provinceElem[i].classList.value.indexOf(prov[1][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[1][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j]['style']['stroke-dashoffset'] = '0';
+            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[1][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'none';
-            pathElem[j]['style']['stroke-dashoffset'] = prov[1][2];
+            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[1][2]};`);
           }
         });
-      } else if (provinceElem[i].classList.value.indexOf(prov[2][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[2][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[2][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j]['style']['stroke-dashoffset'] = '0';
+            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[2][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'none';
-            pathElem[j]['style']['stroke-dashoffset'] = prov[2][2];
+            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[2][2]};`);
           }
         });
-      } else if (provinceElem[i].classList.value.indexOf(prov[3][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[3][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[3][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j]['style']['stroke-dashoffset'] = '0';
+            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[3][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'none';
-            pathElem[j]['style']['stroke-dashoffset'] = prov[3][2];
+            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[3][2]};`);
           }
         });
-      } else if (provinceElem[i].classList.value.indexOf(prov[4][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[4][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[4][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j]['style']['stroke-dashoffset'] = '0';
+            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[4][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'none';
-            pathElem[j]['style']['stroke-dashoffset'] = prov[4][2];
+            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[4][2]};`);
           }
         });
-      } else if (provinceElem[i].classList.value.indexOf(prov[5][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[5][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[5][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j]['style']['stroke-dashoffset'] = '0';
+            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[5][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'none';
-            pathElem[j]['style']['stroke-dashoffset'] = prov[5][2];
+            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[5][2]};`);
           }
         });
-      } else if (provinceElem[i].classList.value.indexOf(prov[6][0]) > -1) {
+      } else if (provinceElem[i].getAttribute('class').indexOf(prov[6][0]) > -1) {
         provinceElem[i].addEventListener('mouseover', () => {
           const pathElem = document.getElementsByClassName(prov[6][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'stroke-dashoffset 2.5s ease';
-            pathElem[j]['style']['stroke-dashoffset'] = '0';
+            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
           }
         });
         provinceElem[i].addEventListener('mouseout', () => {
           const pathElem = document.getElementsByClassName(prov[6][1]);
           for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j]['style']['transition'] = 'none';
-            pathElem[j]['style']['stroke-dashoffset'] = prov[6][2];
+            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[6][2]};`);
           }
         });
       }

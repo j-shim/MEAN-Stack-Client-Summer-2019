@@ -5,19 +5,14 @@
 .btn {
   background-color: #f3c7bb;
 }
-.c-blog {
-  display: flex;
-  border: 1px solid #dddddd;
-
-  &:nth-child(odd) {
-    background-color: #f3c7bb;
-  }
-}
 a {
   color: #007bff;
   text-decoration: none;
   padding: 0.5rem;
 
+  &:nth-child(odd) {
+    background-color: #f3c7bb;
+  }
   &:hover {
     color: #0056b3;
     text-decoration: underline;
