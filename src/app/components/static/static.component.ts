@@ -22,7 +22,11 @@ export class StaticComponent implements OnInit {
       const pageId: string = routeParams.id;
       this._restClientService.getHtml(`assets/static/${pageId}.html`).subscribe((res: string) => {
         this.htmlString = res;
+      }, err => {
+        console.error('Error on htmlString:', err);
       });
+    }, err => {
+      console.error('Error on routeParams:', err);
     });
     // const pageId: string = this._route.snapshot.paramMap.get('id');
     // this._alertService.alert(true, pageId);
