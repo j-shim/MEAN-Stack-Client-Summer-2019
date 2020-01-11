@@ -62,7 +62,7 @@ text.ns:hover {
   display: block;
 }
 path {
-  transition: fill 0.5s ease, transform 0.5s ease;
+  transition: all 0.5s ease;
 
   // path:not(.flight):hover,
   // path.bc:hover ~ circle.bc,
@@ -72,7 +72,7 @@ path {
   // path.on:hover ~ circle.on {
   &:not(.flight-path):hover {
     fill: #c75a4e;
-    transform: translateX(-1px) translateY(-1px);
+    transform: translate(-1px, -1px);
   }
 
   &.victoria,
