@@ -28,9 +28,9 @@ export class BlogAlertComponent implements OnInit {
     const API_ENDPOINT: string = SETTINGS.BASE_URL + SETTINGS.API_BLOG_ALERTS;
     this._restClientService.getHtml(API_ENDPOINT).subscribe(res => {
       const parsedPosts = JSON.parse(res);
-      for (let i = 0; i < parsedPosts.length; i++) { // IE11 support
-        parsedPosts[i].link = `${SETTINGS.BLOG_BASE_URL}${parsedPosts[i].link}`;
-      }
+      parsedPosts.forEach(parsedPostsItem => {
+        parsedPostsItem.link = `${SETTINGS.BLOG_BASE_URL}${parsedPostsItem.link}`;
+      });
       this.blogAlerts = parsedPosts;
       this.isLoadingError = false;
     }, err => {

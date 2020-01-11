@@ -26,200 +26,199 @@ export class MainComponent implements OnInit {
 
   private _setMapHoverTransition(): void {
     const mapElem = document.querySelectorAll('.province');
-    // Use for loop for IE browser support
-    for (let i = 0; i < mapElem.length; i++) {
-      if (mapElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
-        mapElem[i].addEventListener('mouseover', () => {
+    mapElem.forEach(mapElemItem => {
+      if (mapElemItem.getAttribute('class').indexOf(prov[0][0]) > -1) {
+        mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+          });
         });
-        mapElem[i].addEventListener('mouseout', () => {
+        mapElemItem.addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:url(#grad1);transform:none;');
+          });
         });
-      } else if (mapElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
-        mapElem[i].addEventListener('mouseover', () => {
+      } else if (mapElemItem.getAttribute('class').indexOf(prov[1][0]) > -1) {
+        mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+          });
         });
-        mapElem[i].addEventListener('mouseout', () => {
+        mapElemItem.addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:url(#grad1);transform:none;');
+          });
         });
-      } else if (mapElem[i].getAttribute('class').indexOf(prov[2][0]) > -1) {
-        mapElem[i].addEventListener('mouseover', () => {
+      } else if (mapElemItem.getAttribute('class').indexOf(prov[2][0]) > -1) {
+        mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+          });
         });
-        mapElem[i].addEventListener('mouseout', () => {
+        mapElemItem.addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:url(#grad1);transform:none;');
+          });
         });
-      } else if (mapElem[i].getAttribute('class').indexOf(prov[3][0]) > -1) {
-        mapElem[i].addEventListener('mouseover', () => {
+      } else if (mapElemItem.getAttribute('class').indexOf(prov[3][0]) > -1) {
+        mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+          });
         });
-        mapElem[i].addEventListener('mouseout', () => {
+        mapElemItem.addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:url(#grad1);transform:none;');
+          });
         });
-      } else if (mapElem[i].getAttribute('class').indexOf(prov[4][0]) > -1) {
-        mapElem[i].addEventListener('mouseover', () => {
+      } else if (mapElemItem.getAttribute('class').indexOf(prov[4][0]) > -1) {
+        mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+          });
         });
-        mapElem[i].addEventListener('mouseout', () => {
+        mapElemItem.addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:url(#grad1);transform:none;');
+          });
         });
-      } else if (mapElem[i].getAttribute('class').indexOf(prov[5][0]) > -1) {
-        mapElem[i].addEventListener('mouseover', () => {
+      } else if (mapElemItem.getAttribute('class').indexOf(prov[5][0]) > -1) {
+        mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+          });
         });
-        mapElem[i].addEventListener('mouseout', () => {
+        mapElemItem.addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:url(#grad1);transform:none;');
+          });
         });
-      } else if (mapElem[i].getAttribute('class').indexOf(prov[6][0]) > -1) {
-        mapElem[i].addEventListener('mouseover', () => {
+      } else if (mapElemItem.getAttribute('class').indexOf(prov[6][0]) > -1) {
+        mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+          });
         });
-        mapElem[i].addEventListener('mouseout', () => {
+        mapElemItem.addEventListener('mouseout', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
-          for (let j = 0; j < mapProvinceElem.length; j++) {
-            mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-          }
+          mapProvinceElem.forEach(mapProvinceElemItem => {
+            mapProvinceElemItem.setAttribute('style', 'fill:url(#grad1);transform:none;');
+          });
         });
       }
-    }
+    });
   }
 
   private _setPathTransition(): void { // ignore all the errors, it's working
-    const provinceElem = document.getElementsByClassName('province');
+    const provinceElem = document.querySelectorAll('.province');
     // Use for loop for IE browser support
-    for (let i = 0; i < provinceElem.length; i++) {
-      if (provinceElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
-        provinceElem[i].addEventListener('mouseover', () => {
-          const pathElem = document.getElementsByClassName(prov[0][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
-          }
+    provinceElem.forEach(provinceElemItem => {
+      if (provinceElemItem.getAttribute('class').indexOf(prov[0][0]) > -1) {
+        provinceElemItem.addEventListener('mouseover', () => {
+          const pathElem = document.querySelectorAll(`.${prov[0][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
+          });
         });
-        provinceElem[i].addEventListener('mouseout', () => {
-          const pathElem = document.getElementsByClassName(prov[0][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[0][2]};`);
-          }
+        provinceElemItem.addEventListener('mouseout', () => {
+          const pathElem = document.querySelectorAll(`.${prov[0][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', `transition:none;stroke-dashoffset:${prov[0][2]};`);
+          });
         });
-      } else if (provinceElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
-        provinceElem[i].addEventListener('mouseover', () => {
-          const pathElem = document.getElementsByClassName(prov[1][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
-          }
+      } else if (provinceElemItem.getAttribute('class').indexOf(prov[1][0]) > -1) {
+        provinceElemItem.addEventListener('mouseover', () => {
+          const pathElem = document.querySelectorAll(`.${prov[1][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
+          });
         });
-        provinceElem[i].addEventListener('mouseout', () => {
-          const pathElem = document.getElementsByClassName(prov[1][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[1][2]};`);
-          }
+        provinceElemItem.addEventListener('mouseout', () => {
+          const pathElem = document.querySelectorAll(`.${prov[1][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', `transition:none;stroke-dashoffset:${prov[1][2]};`);
+          });
         });
-      } else if (provinceElem[i].getAttribute('class').indexOf(prov[2][0]) > -1) {
-        provinceElem[i].addEventListener('mouseover', () => {
-          const pathElem = document.getElementsByClassName(prov[2][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
-          }
+      } else if (provinceElemItem.getAttribute('class').indexOf(prov[2][0]) > -1) {
+        provinceElemItem.addEventListener('mouseover', () => {
+          const pathElem = document.querySelectorAll(`.${prov[2][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
+          });
         });
-        provinceElem[i].addEventListener('mouseout', () => {
-          const pathElem = document.getElementsByClassName(prov[2][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[2][2]};`);
-          }
+        provinceElemItem.addEventListener('mouseout', () => {
+          const pathElem = document.querySelectorAll(`.${prov[2][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', `transition:none;stroke-dashoffset:${prov[2][2]};`);
+          });
         });
-      } else if (provinceElem[i].getAttribute('class').indexOf(prov[3][0]) > -1) {
-        provinceElem[i].addEventListener('mouseover', () => {
-          const pathElem = document.getElementsByClassName(prov[3][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
-          }
+      } else if (provinceElemItem.getAttribute('class').indexOf(prov[3][0]) > -1) {
+        provinceElemItem.addEventListener('mouseover', () => {
+          const pathElem = document.querySelectorAll(`.${prov[3][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
+          });
         });
-        provinceElem[i].addEventListener('mouseout', () => {
-          const pathElem = document.getElementsByClassName(prov[3][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[3][2]};`);
-          }
+        provinceElemItem.addEventListener('mouseout', () => {
+          const pathElem = document.querySelectorAll(`.${prov[3][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', `transition:none;stroke-dashoffset:${prov[3][2]};`);
+          });
         });
-      } else if (provinceElem[i].getAttribute('class').indexOf(prov[4][0]) > -1) {
-        provinceElem[i].addEventListener('mouseover', () => {
-          const pathElem = document.getElementsByClassName(prov[4][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
-          }
+      } else if (provinceElemItem.getAttribute('class').indexOf(prov[4][0]) > -1) {
+        provinceElemItem.addEventListener('mouseover', () => {
+          const pathElem = document.querySelectorAll(`.${prov[4][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
+          });
         });
-        provinceElem[i].addEventListener('mouseout', () => {
-          const pathElem = document.getElementsByClassName(prov[4][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[4][2]};`);
-          }
+        provinceElemItem.addEventListener('mouseout', () => {
+          const pathElem = document.querySelectorAll(`.${prov[4][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', `transition:none;stroke-dashoffset:${prov[4][2]};`);
+          });
         });
-      } else if (provinceElem[i].getAttribute('class').indexOf(prov[5][0]) > -1) {
-        provinceElem[i].addEventListener('mouseover', () => {
-          const pathElem = document.getElementsByClassName(prov[5][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
-          }
+      } else if (provinceElemItem.getAttribute('class').indexOf(prov[5][0]) > -1) {
+        provinceElemItem.addEventListener('mouseover', () => {
+          const pathElem = document.querySelectorAll(`.${prov[5][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
+          });
         });
-        provinceElem[i].addEventListener('mouseout', () => {
-          const pathElem = document.getElementsByClassName(prov[5][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[5][2]};`);
-          }
+        provinceElemItem.addEventListener('mouseout', () => {
+          const pathElem = document.querySelectorAll(`.${prov[5][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', `transition:none;stroke-dashoffset:${prov[5][2]};`);
+          });
         });
-      } else if (provinceElem[i].getAttribute('class').indexOf(prov[6][0]) > -1) {
-        provinceElem[i].addEventListener('mouseover', () => {
-          const pathElem = document.getElementsByClassName(prov[6][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
-          }
+      } else if (provinceElemItem.getAttribute('class').indexOf(prov[6][0]) > -1) {
+        provinceElemItem.addEventListener('mouseover', () => {
+          const pathElem = document.querySelectorAll(`.${prov[6][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', 'transition:stroke-dashoffset 2.5s ease;stroke-dashoffset:0;');
+          });
         });
-        provinceElem[i].addEventListener('mouseout', () => {
-          const pathElem = document.getElementsByClassName(prov[6][1]);
-          for (let j = 0; j < pathElem.length; j++) {
-            pathElem[j].setAttribute('style', `transition:none;stroke-dashoffset:${prov[6][2]};`);
-          }
+        provinceElemItem.addEventListener('mouseout', () => {
+          const pathElem = document.querySelectorAll(`.${prov[6][1]}`);
+          pathElem.forEach(pathElemItem => {
+            pathElemItem.setAttribute('style', `transition:none;stroke-dashoffset:${prov[6][2]};`);
+          });
         });
       }
-    }
+    });
   }
 
 }
