@@ -29,23 +29,17 @@ export class MainComponent implements OnInit {
     // Use for loop for IE browser support
     for (let i = 0; i < mapElem.length; i++) {
       if (mapElem[i].getAttribute('class').indexOf(prov[0][0]) > -1) {
-        console.log('test 4');
         mapElem[i].addEventListener('mouseover', () => {
-          console.log('test 5');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
-          console.log('test 6');
           for (let j = 0; j < mapProvinceElem.length; j++) {
             // mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
             mapProvinceElem[j].setAttribute('transform', 'translate(-1px, -1px);');
-            console.log('test 7');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
-          console.log('test 8');
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
             mapProvinceElem[j].setAttribute('style', 'fill:url(#grad1);transform:none;');
-            console.log('test 9');
           }
         });
       } else if (mapElem[i].getAttribute('class').indexOf(prov[1][0]) > -1) {
