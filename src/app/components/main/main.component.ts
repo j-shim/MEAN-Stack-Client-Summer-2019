@@ -32,8 +32,7 @@ export class MainComponent implements OnInit {
         mapElem[i].addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
           for (let j = 0; j < mapProvinceElem.length; j++) {
-            // mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
-            mapProvinceElem[j].setAttribute('transform', 'translate(-1px, -1px);');
+            mapProvinceElem[j].setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
           }
         });
         mapElem[i].addEventListener('mouseout', () => {
