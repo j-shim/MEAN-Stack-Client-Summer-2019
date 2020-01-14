@@ -7,6 +7,7 @@
 }
 .c-blog {
   display: flex;
+  border: 1px solid #dddddd;
 
   &:nth-child(odd) {
     background-color: #f3c7bb;
@@ -14,8 +15,9 @@
 }
 a {
   color: #007bff;
-  text-decoration: none;
+  text-decoration: underline;
   padding: 0.5rem;
+  font-weight: bold;
 
   &:hover {
     color: #0056b3;
