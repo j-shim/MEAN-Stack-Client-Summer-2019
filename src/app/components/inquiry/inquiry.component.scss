@@ -15,6 +15,11 @@
   }
 
   margin: 2rem;
+
+  label:not(.form-check-label) {
+    font-weight: bold;
+  }
+
   .col-md {
     padding-left: 0;
     padding-right: 0;
@@ -31,7 +36,7 @@
     }
 
     .btn {
-      background-color: #666;
+      background-color: #d35143;
       color: white;
       width: 100%;
     }
