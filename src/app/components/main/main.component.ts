@@ -31,7 +31,7 @@ export class MainComponent implements OnInit {
         mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[0][0]}`);
           mapProvinceElem.forEach(mapProvinceElemItem => {
-            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-3px, -3px);');
           });
         });
         mapElemItem.addEventListener('mouseout', () => {
@@ -44,7 +44,7 @@ export class MainComponent implements OnInit {
         mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[1][0]}`);
           mapProvinceElem.forEach(mapProvinceElemItem => {
-            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-3px, -3px);');
           });
         });
         mapElemItem.addEventListener('mouseout', () => {
@@ -57,7 +57,7 @@ export class MainComponent implements OnInit {
         mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[2][0]}`);
           mapProvinceElem.forEach(mapProvinceElemItem => {
-            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-3px, -3px);');
           });
         });
         mapElemItem.addEventListener('mouseout', () => {
@@ -70,7 +70,7 @@ export class MainComponent implements OnInit {
         mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[3][0]}`);
           mapProvinceElem.forEach(mapProvinceElemItem => {
-            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-3px, -3px);');
           });
         });
         mapElemItem.addEventListener('mouseout', () => {
@@ -83,7 +83,7 @@ export class MainComponent implements OnInit {
         mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[4][0]}`);
           mapProvinceElem.forEach(mapProvinceElemItem => {
-            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-3px, -3px);');
           });
         });
         mapElemItem.addEventListener('mouseout', () => {
@@ -96,7 +96,7 @@ export class MainComponent implements OnInit {
         mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[5][0]}`);
           mapProvinceElem.forEach(mapProvinceElemItem => {
-            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-3px, -3px);');
           });
         });
         mapElemItem.addEventListener('mouseout', () => {
@@ -109,7 +109,7 @@ export class MainComponent implements OnInit {
         mapElemItem.addEventListener('mouseover', () => {
           const mapProvinceElem = document.querySelectorAll(`path.province.${prov[6][0]}`);
           mapProvinceElem.forEach(mapProvinceElemItem => {
-            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-1px, -1px);');
+            mapProvinceElemItem.setAttribute('style', 'fill:#c75a4e;transform:translate(-3px, -3px);');
           });
         });
         mapElemItem.addEventListener('mouseout', () => {
