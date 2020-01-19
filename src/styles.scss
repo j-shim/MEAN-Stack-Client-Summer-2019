@@ -145,7 +145,7 @@ div#app-static-html {
     .flex-container {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: flex-start;
 
       .flex-item {
