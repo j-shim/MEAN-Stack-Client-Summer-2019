@@ -554,10 +554,6 @@
 <br>
 <br>
 
-<div class="jumbotron text-center" *ngIf="userService.isUserLoggedIn">
-  <h1>Welcome back, {{ userService.loginUser.firstname }}!</h1>
-</div>
-
 <div class="row">
   <div class="col-md-6 col-md-left">
     <app-blog-alert></app-blog-alert>
@@ -565,10 +561,4 @@
   <div class="col-md-6 col-md-right">
     <app-blog-posts></app-blog-posts>
   </div>
-  <!-- #e6bdb2 w3schools table color white and that one -->
-  <!-- <div class="col-md">
-    <h3>Column 3</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-  </div> -->
 </div>
