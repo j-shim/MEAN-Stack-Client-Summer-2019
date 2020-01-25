@@ -10,13 +10,19 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/assets/img/static/001-01.jpg" alt="">
+      <a [routerLink]="['/page', 'about']">
+        <img src="/assets/img/static/001-01.jpg" alt="">
+      </a>
     </div>
     <div class="carousel-item">
-      <img src="/assets/img/static/001-02.png" alt="">
+      <a [routerLink]="['/page', 'student-intro']">
+        <img src="/assets/img/static/001-02.png" alt="">
+      </a>
     </div>
     <div class="carousel-item">
-      <img src="/assets/img/static/001-16.jpg" alt="">
+      <a [routerLink]="['/page', 'upp']">
+        <img src="/assets/img/static/001-16.jpg" alt="">
+      </a>
     </div>
   </div>
 
