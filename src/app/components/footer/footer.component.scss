@@ -1,10 +1,28 @@
-div {
+@import 'src/variables';
+
+.c-container {
   text-align: center;
-  background-color: #bbb;
+  color: #eeeeee;
+  background-color: #5a5a5a;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-bottom: 3.3rem; // ContactUsComponent is fixed to the bottom
 
-  a {
-    display: inline;
+  .c-item-browser {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: $width-md) {
+  .c-container {
+    margin-bottom: 0;
+
+    .c-item {
+      display: inline-block;
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
+    }
   }
 }
