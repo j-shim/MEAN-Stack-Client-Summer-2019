@@ -21,4 +21,5 @@ fi
 ng build --prod
 # Copy html file for naver.com search
 cp src/naver0f52cb6e62bd6cace71789ba5293e137.html dist/mean-client
+cp src/robots.txt dist/mean-client
 echo "Next step: Run awsscp ..."
