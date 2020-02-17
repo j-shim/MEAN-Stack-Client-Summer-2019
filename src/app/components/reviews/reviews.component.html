@@ -8,7 +8,7 @@
   </div>
   <hr>
   <h3><strong>새 후기 작성하기</strong></h3>
-  <form (ngSubmit)="onSubmit()" [formGroup]="reviewForm">
+  <form class="c-review-form" (ngSubmit)="onSubmit()" [formGroup]="reviewForm">
     <div class="form-group">
       <label for="title">제목</label>
       <input type="text" class="form-control" id="title" placeholder="제목을 입력해주세요." required formControlName="title">

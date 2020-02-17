@@ -129,8 +129,7 @@ path {
 }
 
 .row {
-  .col-md-6,
-  .col-md {
+  .col-md-4 {
     padding-left: 0;
     padding-right: 0;
   }
@@ -139,10 +138,14 @@ path {
 @media screen and (min-width: $width-md) {
   .row {
     .col-md-left {
-      padding-right: 1rem;
+      padding-right: 0.5rem;
+    }
+    .col-md-center {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
     .col-md-right {
-      padding-left: 1rem;
+      padding-left: 0.5rem;
     }
   }
 }
