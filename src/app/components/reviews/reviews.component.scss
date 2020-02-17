@@ -1,0 +1,53 @@
+@import 'src/variables';
+
+.c-container {
+  &::before {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 45vw;
+    top: 61vh;
+    width: 50vw;
+    height: 50vw;
+    z-index: -10;
+    background: url('/assets/img/watermark-20.png');
+    background-size: cover;
+  }
+
+  margin: 2rem;
+
+  label {
+    font-weight: bold;
+  }
+
+  p {
+    word-wrap: break-word;
+    padding-bottom: 1rem;
+  }
+
+  .form-control:focus {
+    border-color: #e0ab87;
+    box-shadow: 0 0 0 0.2rem rgba(245, 150, 62, 0.25);
+  }
+
+  .btn {
+    background-color: #d35143;
+    color: white;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $width-md) {
+  .c-container {
+    &::before {
+      left: 60vw;
+      top: 45vh;
+      width: 25vw;
+      height: 25vw;
+    }
+
+    .btn {
+      margin-top: 0.65rem;
+    }
+  }
+}
