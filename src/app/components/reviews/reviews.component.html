@@ -1,10 +1,12 @@
 <div class="c-container">
   <h3><strong>캐노리아 후기</strong></h3>
   <hr>
-  <div class="c-review" *ngFor="let review of reviews">
-    <h5><strong>{{review.title}}</strong></h5>
-    <p>{{review.body}}</p>
-    <hr>
+  <div class="c-review-container">
+    <div class="c-review" *ngFor="let review of reviews">
+      <h5><strong>{{review.title}}</strong></h5>
+      <p>{{review.body}}</p>
+      <hr>
+    </div>
   </div>
   <hr>
   <h3><strong>새 후기 작성하기</strong></h3>

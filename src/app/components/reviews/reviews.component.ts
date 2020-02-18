@@ -38,8 +38,10 @@ export class ReviewsComponent implements OnInit {
 
     this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_REVIEWS, this.reviewForm.value)
       .subscribe(resp => {
-        this._alertService.alert(true, '작성이 성공적으로 완료 되었습니다.');
-        // this._router.navigate(['/reviews']);
+        this._alertService.alert(true, '작성이 성공적으로 완료 되었습니다. 5초 후에 자동으로 새로고침이 실행됩니다.');
+        setTimeout(() => {
+          location.reload();
+        }, 5000);
       }, err => {
         console.error('Error on Review uploading:', err);
         this._alertService.alert(false, `문제가 발생하였습니다. 나중에 다시 시도하시기 바랍니다.`);

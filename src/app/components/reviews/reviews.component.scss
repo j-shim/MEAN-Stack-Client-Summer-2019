@@ -5,18 +5,25 @@
     margin-top: 0;
   }
 
-  .c-review {
-    h5,
-    p {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      word-wrap: break-word;
+  .c-review-container {
+    max-height: 20rem;
+    overflow-y: scroll;
+    .c-review {
+      h5,
+      p {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        word-wrap: break-word;
+      }
     }
   }
 
+  hr + h3 {
+    padding-left: 2.5rem;
+  }
   .c-review-form {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 
     label {
       font-weight: bold;
