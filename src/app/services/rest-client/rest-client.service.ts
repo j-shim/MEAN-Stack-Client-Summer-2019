@@ -25,7 +25,7 @@ export class RestClientService {
   }
 
   public getBlogPage(url: string): Observable<any> {
-    const originUrl: string = '*';
+    const originUrl = '*';
     const headers = new HttpHeaders()
                     .set('Access-Control-Allow-Origin', originUrl);
     
