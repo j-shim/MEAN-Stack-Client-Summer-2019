@@ -28,7 +28,7 @@ export class RestClientService {
     const originUrl = '*';
     const headers = new HttpHeaders()
                     .set('Access-Control-Allow-Origin', originUrl);
-    
+
     return this._http.get(url).pipe(
       catchError(this._handleError)
     );
@@ -50,21 +50,30 @@ export class RestClientService {
   }
 
   private _handleError(error: HttpErrorResponse): Observable<never> {
-    // For dev purposes only
-    // console.error(error);
-
-    if (error.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
-      console.error('Error:', error.error.message);
-    } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong,
-      console.error(
-        `Backend returned code ${error.status}, ` +
-        `Body was: ${error.error}`, error.error
-      );
+    if (error.message !== undefined && error.message !== null) {
+      console.error(error.message);
     }
-    // return an observable with a user-facing error message
-    return throwError(error.error.message);
+    if (error.error.message !== undefined && error.error.message !== null) {
+      console.error(error.error.message);
+    }
+    return throwError('Please check javascript debug console for error messages');
   }
+  // private _handleError(error: HttpErrorResponse): Observable<never> {
+  //   // For dev purposes only
+  //   // console.error(error);
+
+  //   if (error.error instanceof ErrorEvent) {
+  //     // A client-side or network error occurred. Handle it accordingly.
+  //     console.error('Error:', error.error.message);
+  //   } else {
+  //     // The backend returned an unsuccessful response code.
+  //     // The response body may contain clues as to what went wrong,
+  //     console.error(
+  //       `Backend returned code ${error.status}, ` +
+  //       `Body was: ${error.error}`, error.error
+  //     );
+  //   }
+  //   // return an observable with a user-facing error message
+  //   return throwError(error.error.message);
+  // }
 }
