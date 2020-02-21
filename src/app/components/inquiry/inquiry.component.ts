@@ -6,6 +6,18 @@ import { AlertService } from 'src/app/services/alert/alert.service';
 import { SETTINGS } from 'src/app/settings';
 import { InquiryService } from 'src/app/services/inquiry/inquiry.service';
 
+const translationMap = {
+  inquiryType: '상담유형',
+  name: '이름',
+  email: '이메일',
+  tel: '연락처',
+  departureYear: '출국 희망시기(년도)',
+  departureMonth: '출국 희망시기(월)',
+  visitOrCall: '방문/전화',
+  date: '상담희망일자',
+  body: '문의내용'
+};
+
 @Component({
   selector: 'app-inquiry',
   templateUrl: './inquiry.component.html',
@@ -39,7 +51,7 @@ export class InquiryComponent implements OnInit {
   public onSubmit(): void {
     // stop here if form is invalid
     if (this.inquiryForm.invalid) {
-      this._alertService.alert(false, '문의 내용이 올바르지 않습니다.');
+      this._onInvalidForm();
       return;
     }
     const currentTime: number = Date.now();
@@ -54,14 +66,24 @@ export class InquiryComponent implements OnInit {
     this._restClientService.post(SETTINGS.BASE_URL + SETTINGS.API_MAILER, { htmlString })
       .subscribe(resp => {
         this._alertService.alert(true, '신청이 성공적으로 완료 되었습니다.');
+        this.inquiryForm.reset();
+        this._inquiryService.setSubmitTime(currentTime);
         // this._router.navigate(['/']);
       }, err => {
-        console.error('Error on Inquiry:', err);
         this._alertService.alert(false, `문제가 발생하였습니다. 나중에 다시 시도하시기 바랍니다.`);
         // this._alertService.alert(false, `문제가 발생하였습니다. 나중에 다시 시도하시기 바랍니다.: ${typeof err === 'string' ? err : JSON.stringify(err)}`);
       });
+  }
 
-    this.inquiryForm.reset();
+  private _onInvalidForm(): void {
+    const controls = this.inquiryForm.controls;
+    let invalidFields = '문의 내용이 올바르지 않습니다:';
+    Object.keys(controls).forEach(key => {
+      if (controls[key].invalid) {
+        invalidFields += ' ' + translationMap[key];
+      }
+    });
+    this._alertService.alert(false, invalidFields);
   }
 
   private _toHtmlString(form): string {
